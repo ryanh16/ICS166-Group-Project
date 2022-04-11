@@ -287,7 +287,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1474072078}
         m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
-        m_MethodName: nextDialogue
+        m_MethodName: OnContinueButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -638,7 +638,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a999cb417c691548bce09d7c9d5776f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dm: {fileID: 1474072078}
 --- !u!114 &959957284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1013,9 +1012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c662bc221778b14bb0bc70114c90e0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 724068657}
-  dialogueText: {fileID: 1708375818}
-  animator: {fileID: 1652290982}
+  dialogueBox: {fileID: 1652290978}
 --- !u!4 &1474072079
 Transform:
   m_ObjectHideFlags: 0
@@ -1259,7 +1256,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 765b5d140f76c114fba5d03fdbc6903e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dm: {fileID: 1474072078}
 --- !u!114 &1917229802
 MonoBehaviour:
   m_ObjectHideFlags: 0

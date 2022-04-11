@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class Test2 : MonoBehaviour
 {
-    public DialogueManager dm;
-
     public void onClick()
     {
         string[] d = { "Hello", "This is Test2!" };
-        dm.setDialogues(d, "test2");
-        dm.startDialogue();
+        DialogueManager.setDialogues(d, "test2");
+        DialogueManager.startDialogue();
     }
 }
