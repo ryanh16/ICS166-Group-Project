@@ -1,0 +1,39 @@
+{
+    "name": "Hertzole.GoldPlayer",
+    "references": [
+        "Unity.TextMeshPro",
+        "Unity.InputSystem",
+        "UnityEngine.UI",
+        "Cinemachine"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.ugui",
+            "expression": "",
+            "define": "GOLD_PLAYER_UGUI"
+        },
+        {
+            "name": "com.unity.textmeshpro",
+            "expression": "",
+            "define": "GOLD_PLAYER_TMP"
+        },
+        {
+            "name": "com.unity.inputsystem",
+            "expression": "",
+            "define": "GOLD_PLAYER_NEW_INPUT"
+        },
+        {
+            "name": "com.unity.cinemachine",
+            "expression": "",
+            "define": "GOLD_PLAYER_CINEMACHINE"
+        }
+    ],
+    "noEngineReferences": false
+}
