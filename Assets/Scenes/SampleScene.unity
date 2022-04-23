@@ -1398,6 +1398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 1652290978}
+  controll: {fileID: 4064729}
 --- !u!4 &1474072079
 Transform:
   m_ObjectHideFlags: 0

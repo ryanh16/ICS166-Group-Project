@@ -25,12 +25,18 @@ public class DialogueManager : MonoBehaviour
 
     private static bool isInDia = false;
 
+    [SerializeField]
+    private GameObject controll;
+    private static Hertzole.GoldPlayer.GoldPlayerController goldController;
+
+
     private void Start()
     {
         instance = this; // this instance variable is used to call coroutine related methods
         animator = dialogueBox.GetComponent<Animator>();
         nameText = dialogueBox.transform.GetChild(1).GetComponent<Text>();
         dialogueText = dialogueBox.transform.GetChild(2).GetComponent<Text>();
+        goldController = controll.GetComponent<Hertzole.GoldPlayer.GoldPlayerController>();
     }
 
     // This method is called when user click on the "Continue" button in the dialogue box
@@ -80,6 +86,8 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+        goldController.enabled = false;
+
         isInDia = true;
 
         animator.SetBool("IsOnScreen", true);
@@ -110,6 +118,7 @@ public class DialogueManager : MonoBehaviour
     public static void endDialogue()
     {
         isInDia = false;
+        goldController.enabled = true;
         animator.SetBool("IsOnScreen", false) ;
     }
 
