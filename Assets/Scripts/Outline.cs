@@ -95,6 +95,10 @@ public class Outline : MonoBehaviour {
     // Retrieve or generate smooth normals
     LoadSmoothNormals();
 
+    outlineColor.r = 0;
+    outlineColor.g = 0;
+    outlineColor.b = 0;
+
     outlineColor.a = 0;
     // Apply material properties immediately
     needsUpdate = true;
@@ -309,9 +313,6 @@ public class Outline : MonoBehaviour {
   }
     public void OnMouseOver()
     {
-        outlineColor.r = 0;
-        outlineColor.g = 0;
-        outlineColor.b = 0;
         outlineColor.a = 255;
         needsUpdate = true;
         ObjectLookingAt.setCurrentObject(this.gameObject);
