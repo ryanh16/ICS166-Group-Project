@@ -88,6 +88,9 @@ public class DialogueManager : MonoBehaviour
 
         goldController.enabled = false;
 
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
         isInDia = true;
 
         animator.SetBool("IsOnScreen", true);
@@ -120,6 +123,9 @@ public class DialogueManager : MonoBehaviour
         isInDia = false;
         goldController.enabled = true;
         animator.SetBool("IsOnScreen", false) ;
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // This method will type out the dialogue text one letter by one letter

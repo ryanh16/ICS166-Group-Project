@@ -37,7 +37,8 @@ public class ObjectLookingAt : MonoBehaviour
             }
             else
             {
-                DialogueManager.endDialogue();
+                if (!DialogueManager.isInDialogue())
+                    DialogueManager.endDialogue();
             }
         }
     }
