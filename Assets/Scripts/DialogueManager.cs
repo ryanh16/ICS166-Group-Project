@@ -23,6 +23,8 @@ public class DialogueManager : MonoBehaviour
 
     private static DialogueManager instance;
 
+    private static bool isInDia = false;
+
     private void Start()
     {
         instance = this; // this instance variable is used to call coroutine related methods
@@ -39,7 +41,7 @@ public class DialogueManager : MonoBehaviour
     //    whether the text in the dialogue box is the same as the currentSentence
     //    that is supposed to be typed out, currentSentence variable is updated
     //    everytime when the dialogue is advanced)
-    public void OnContinueButtonClick()
+    public static void OnContinueButtonClick()
     {
         // stop any ongoing typing out coroutines first 
         instance.StopAllCoroutines();
@@ -78,6 +80,8 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+        isInDia = true;
+
         animator.SetBool("IsOnScreen", true);
 
         nameText.text = whoIsSpeaking;
@@ -95,6 +99,8 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+        isInDia = true;
+
         instance.StopAllCoroutines();
         currentSentence = dialogues.Dequeue();
         instance.StartCoroutine(typeOutDialogue(currentSentence));
@@ -103,6 +109,7 @@ public class DialogueManager : MonoBehaviour
     // When the dialogue is finished, the dialogue box will flash out of the screen
     public static void endDialogue()
     {
+        isInDia = false;
         animator.SetBool("IsOnScreen", false) ;
     }
 
@@ -116,5 +123,10 @@ public class DialogueManager : MonoBehaviour
             dialogueText.text += letter;
             yield return null;
         }
+    }
+
+    public static bool isInDialogue()
+    {
+        return isInDia;
     }
 }
