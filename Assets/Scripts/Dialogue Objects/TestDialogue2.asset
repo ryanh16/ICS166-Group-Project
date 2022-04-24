@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6edbe1f8d548f21498dd1d319f03a353, type: 3}
   m_Name: TestDialogue2
   m_EditorClassIdentifier: 
+  speakers:
+  - Me
+  - Jesus
   dialogue:
-  - This is
-  - a second test,
-  - Just for fun!
+  - 0\Hello Jesus
+  - 1\uwu
+  - 0\Alrighty then

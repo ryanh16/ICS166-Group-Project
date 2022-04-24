@@ -39,8 +39,8 @@ public class ObjectLookingAt : MonoBehaviour
 
             else
             {
-                if (!DialogueManager.isInDialogue())
-                    DialogueManager.endDialogue();
+                if (!DialogueManager.IsInDialogue())
+                    DialogueManager.EndDialogue();
             }
         }
     }

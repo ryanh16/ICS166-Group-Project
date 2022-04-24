@@ -9,7 +9,7 @@ public class InputManager : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Return))
         {
-            if (DialogueManager.isInDialogue())
+            if (DialogueManager.IsInDialogue())
             {
                 DialogueManager.OnContinueButtonClick();
             }

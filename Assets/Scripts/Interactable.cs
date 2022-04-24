@@ -11,7 +11,7 @@ public class Interactable : MonoBehaviour
 
     public void StartDialogue()
     {
-        DialogueManager.setDialogues(dialogue.GetDialogue());
-        DialogueManager.startDialogue();
+        DialogueManager.SetDialogues(dialogue);
+        DialogueManager.StartDialogue();
     }
 }

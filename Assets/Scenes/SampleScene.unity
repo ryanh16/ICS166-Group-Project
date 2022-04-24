@@ -888,10 +888,10 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: NameGoesHere
 --- !u!222 &724068658
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1380,7 +1380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aad98cdf2a47684ea0089cd20f0d61b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: fcb0e900f68d30b4b88aea3cc294985e, type: 2}
+  dialogue: {fileID: 11400000, guid: b8e2858cc22de8540984c7581b14cd1c, type: 2}
 --- !u!1 &1474072077
 GameObject:
   m_ObjectHideFlags: 0
@@ -1412,7 +1412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 1652290978}
-  controll: {fileID: 4064729}
+  playerObject: {fileID: 4064729}
 --- !u!4 &1474072079
 Transform:
   m_ObjectHideFlags: 0
@@ -1928,7 +1928,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: DialogueGoesHere
 --- !u!222 &1708375819
 CanvasRenderer:
   m_ObjectHideFlags: 0
