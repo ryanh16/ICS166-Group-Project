@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -888,10 +888,10 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: NameGoesHere
 --- !u!222 &724068658
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1266,6 +1266,7 @@ GameObject:
   - component: {fileID: 1456343286}
   - component: {fileID: 1456343285}
   - component: {fileID: 1456343289}
+  - component: {fileID: 1456343290}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1367,6 +1368,19 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!114 &1456343290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456343284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aad98cdf2a47684ea0089cd20f0d61b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 11400000, guid: b8e2858cc22de8540984c7581b14cd1c, type: 2}
 --- !u!1 &1474072077
 GameObject:
   m_ObjectHideFlags: 0
@@ -1398,7 +1412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 1652290978}
-  controll: {fileID: 4064729}
+  playerObject: {fileID: 4064729}
 --- !u!4 &1474072079
 Transform:
   m_ObjectHideFlags: 0
@@ -1914,7 +1928,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: DialogueGoesHere
 --- !u!222 &1708375819
 CanvasRenderer:
   m_ObjectHideFlags: 0

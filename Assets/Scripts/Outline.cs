@@ -315,14 +315,14 @@ public class Outline : MonoBehaviour {
     {
         outlineColor.a = 255;
         needsUpdate = true;
-        ObjectLookingAt.setCurrentObject(this.gameObject);
+        ObjectLookingAt.SetCurrentObject(this.gameObject);
     }
 
     public void OnMouseExit()
     {
         outlineColor.a = 0;
         needsUpdate = true;
-        GameObject currentObj = ObjectLookingAt.getCurrentObject();
+        GameObject currentObj = ObjectLookingAt.GetCurrentObject();
         if (currentObj)
         {
             // if the current object player is looking at is different from this gameObject,
@@ -330,7 +330,7 @@ public class Outline : MonoBehaviour {
             // player is looking at, and thus this class does not need to removeCurrentObject()
             if (currentObj.GetInstanceID() == this.gameObject.GetInstanceID())
             {
-                ObjectLookingAt.removeCurrentObject();
+                ObjectLookingAt.RemoveCurrentObject();
             }
         }
     }

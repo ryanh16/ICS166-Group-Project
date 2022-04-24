@@ -10,34 +10,43 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    // Variables storing references to dialogue box objects
     [SerializeField]
     private GameObject dialogueBox;
-
     private static Text nameText;
     private static Text dialogueText;
     private static Animator animator;
 
-    private static string whoIsSpeaking = "me";
+    // Variables related to dialogue text management
     private static string currentSentence = "";
     private static Queue<string> dialogues = new Queue<string>();
-
-    private static DialogueManager instance;
-
     private static bool isInDia = false;
+    private Dialogue curDialogue;
 
+    // Variables related to GoldController
     [SerializeField]
-    private GameObject controll;
+    private GameObject playerObject;
     private static Hertzole.GoldPlayer.GoldPlayerController goldController;
+
+    private static DialogueManager Instance;
+
 
 
     private void Start()
     {
-        instance = this; // this instance variable is used to call coroutine related methods
+        Instance = this; // this instance variable is used to call coroutine related methods
         animator = dialogueBox.GetComponent<Animator>();
         nameText = dialogueBox.transform.GetChild(1).GetComponent<Text>();
         dialogueText = dialogueBox.transform.GetChild(2).GetComponent<Text>();
-        goldController = controll.GetComponent<Hertzole.GoldPlayer.GoldPlayerController>();
+        goldController = playerObject.GetComponent<Hertzole.GoldPlayer.GoldPlayerController>();
     }
+
+
+    private void OnDestroy()
+    {
+        Instance = null;
+    }
+
 
     // This method is called when user click on the "Continue" button in the dialogue box
     // 1. if the currentSentence has been typed out completely, this method will 
@@ -50,39 +59,38 @@ public class DialogueManager : MonoBehaviour
     public static void OnContinueButtonClick()
     {
         // stop any ongoing typing out coroutines first 
-        instance.StopAllCoroutines();
-        if (dialogueText.text == currentSentence)
+        Instance.StopAllCoroutines();
+        if (dialogueText.text == ParseSentence(currentSentence).Value)
         {
-            nextDialogue();
+            NextDialogue();
         }
+
         else
         {
             dialogueText.text = currentSentence;
         }
     }
 
+
     // This method allows to set the dialogues, every element in the "sentences"
     // parameter will occupy a dialogue box, the parameter "name" is just the 
     // name of the thing/person that is speaking, and it has a default value of "me"
-    public static void setDialogues(string[] sentences, string name = "me")
+    public static void SetDialogues(Dialogue incomingDialogue)
     {
-        dialogues.Clear();
-        whoIsSpeaking = name;
-        foreach (string sentence in sentences)
-        {
-            dialogues.Enqueue(sentence);
-        }
+        dialogues = new Queue<string>(incomingDialogue.GetDialogue());
+        Instance.curDialogue = incomingDialogue;
     }
+
 
     // When starting the dialogue, the dialogue box will first flash in the screen
     // (if the dialogue box is already in the screen, it will just stay), and then
     // display the name of speaker and the first sentence in the dialogue box.
-    public static void startDialogue()
+    public static void StartDialogue()
     {
         // a fail-safe
         if (dialogues.Count == 0)
         {
-            endDialogue();
+            EndDialogue();
             return;
         }
 
@@ -95,30 +103,31 @@ public class DialogueManager : MonoBehaviour
 
         animator.SetBool("IsOnScreen", true);
 
-        nameText.text = whoIsSpeaking;
         currentSentence = dialogues.Dequeue();
-        instance.StartCoroutine(typeOutDialogue(currentSentence));
+        Instance.StartCoroutine(TypeOutDialogue(currentSentence));
     }
+
 
     // This method will advance the dialogue to the next sentence 
     // and update the currentSentence variable 
-    public static void nextDialogue()
+    public static void NextDialogue()
     {
         if (dialogues.Count == 0)
         {
-            endDialogue();
+            EndDialogue();
             return;
         }
 
         isInDia = true;
 
-        instance.StopAllCoroutines();
+        Instance.StopAllCoroutines();
         currentSentence = dialogues.Dequeue();
-        instance.StartCoroutine(typeOutDialogue(currentSentence));
+        Instance.StartCoroutine(TypeOutDialogue(currentSentence));
     }
 
+
     // When the dialogue is finished, the dialogue box will flash out of the screen
-    public static void endDialogue()
+    public static void EndDialogue()
     {
         isInDia = false;
         goldController.enabled = true;
@@ -128,20 +137,41 @@ public class DialogueManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
 
+
     // This method will type out the dialogue text one letter by one letter
     // at a rate of 1 letter per frame.
-    public static IEnumerator typeOutDialogue(string sentence)
+    public static IEnumerator TypeOutDialogue(string sentence)
     {
+        KeyValuePair<string, string> splitSentence = ParseSentence(sentence);
+        nameText.text = splitSentence.Key;
+        
         dialogueText.text = "";
-        foreach (char letter in sentence.ToCharArray())
+
+        foreach (char letter in splitSentence.Value.ToCharArray())
         {
             dialogueText.text += letter;
             yield return null;
         }
     }
 
-    public static bool isInDialogue()
+
+    public static bool IsInDialogue()
     {
         return isInDia;
+    }
+
+
+    // Splits a sentence into its speaker and content
+    private static KeyValuePair<string, string> ParseSentence(string curSentence)
+    {
+        // Parse current sentence to separate speaker index from content
+        string[] splitSentence = curSentence.Split('\\');
+
+        if (string.IsNullOrEmpty(splitSentence[0]))
+        {
+            Debug.LogError($"No speaker assigned for message: {splitSentence[1]}");
+        }
+
+        return new KeyValuePair<string, string>(Instance.curDialogue.GetSpeaker(int.Parse(splitSentence[0])), splitSentence[1]);
     }
 }

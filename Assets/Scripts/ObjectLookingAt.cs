@@ -7,20 +7,25 @@ public class ObjectLookingAt : MonoBehaviour
 {
     private static GameObject currentObject;
 
-    public static void setCurrentObject(GameObject go)
+
+
+    public static void SetCurrentObject(GameObject go)
     {
         currentObject = go;
     }
 
-    public static void removeCurrentObject()
+
+    public static void RemoveCurrentObject()
     {
         currentObject = null;
     }
 
-    public static GameObject getCurrentObject()
+
+    public static GameObject GetCurrentObject()
     {
         return currentObject;
     }
+
 
     private void Update()
     {
@@ -29,14 +34,13 @@ public class ObjectLookingAt : MonoBehaviour
             // probably another place to start the dialogue
             if (currentObject)
             {
-                string[] d = { "this is just a black cube", "I put it here for testing", "but this is a way to substitue fungus" };
-                DialogueManager.setDialogues(d);
-                DialogueManager.startDialogue();
+                currentObject.GetComponent<Interactable>().StartDialogue();
             }
+
             else
             {
-                if (!DialogueManager.isInDialogue())
-                    DialogueManager.endDialogue();
+                if (!DialogueManager.IsInDialogue())
+                    DialogueManager.EndDialogue();
             }
         }
     }
