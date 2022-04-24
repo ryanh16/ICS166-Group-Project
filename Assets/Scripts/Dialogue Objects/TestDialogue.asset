@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6edbe1f8d548f21498dd1d319f03a353, type: 3}
   m_Name: TestDialogue
   m_EditorClassIdentifier: 
+  speakers:
+  - Me
   dialogue:
-  - This is just a black cube
-  - I put it here for testing
-  - This is our substitute for fungus
+  - 0\This is just a black cube
+  - 0\I put it here for testing
+  - 0\This is our substitute for fungus
