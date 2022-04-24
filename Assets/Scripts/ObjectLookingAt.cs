@@ -25,23 +25,4 @@ public class ObjectLookingAt : MonoBehaviour
     {
         return currentObject;
     }
-
-
-    private void Update()
-    {
-        if (Input.GetMouseButtonUp(0))
-        {
-            // probably another place to start the dialogue
-            if (currentObject)
-            {
-                currentObject.GetComponent<Interactable>().StartDialogue();
-            }
-
-            else
-            {
-                if (!DialogueManager.IsInDialogue())
-                    DialogueManager.EndDialogue();
-            }
-        }
-    }
 }

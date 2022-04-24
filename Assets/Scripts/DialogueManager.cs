@@ -36,8 +36,8 @@ public class DialogueManager : MonoBehaviour
     {
         Instance = this; // this instance variable is used to call coroutine related methods
         animator = dialogueBox.GetComponent<Animator>();
-        nameText = dialogueBox.transform.GetChild(1).GetComponent<Text>();
-        dialogueText = dialogueBox.transform.GetChild(2).GetComponent<Text>();
+        nameText = dialogueBox.transform.GetChild(0).GetComponent<Text>();
+        dialogueText = dialogueBox.transform.GetChild(1).GetComponent<Text>();
         goldController = playerObject.GetComponent<Hertzole.GoldPlayer.GoldPlayerController>();
     }
 
@@ -67,7 +67,7 @@ public class DialogueManager : MonoBehaviour
 
         else
         {
-            dialogueText.text = currentSentence;
+            dialogueText.text = ParseSentence(currentSentence).Value;
         }
     }
 
