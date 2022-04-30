@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 659972606076374558}
-  m_LocalRotation: {x: -0.625961, y: -0, z: -0, w: 0.77985436}
+  m_LocalRotation: {x: -0.6259642, y: 0, z: 0, w: 0.7798518}
   m_LocalPosition: {x: -0.39987743, y: 1.59, z: 2.4048765}
   m_LocalScale: {x: 0.5300217, y: 0.0090955645, z: 0.32388213}
   m_Children:
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 0
   outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
+  outlineWidth: 5
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
+  m_DynamicPixelsPerUnit: 100
   m_PresetInfoIsWorld: 1
 --- !u!114 &659972606242349663
 MonoBehaviour:
