@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -11,8 +9,10 @@ public class InputManager : MonoBehaviour
 {
     private GameObject currentObject;
 
+
+
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         currentObject = ObjectLookingAt.GetCurrentObject();
 
@@ -34,11 +34,23 @@ public class InputManager : MonoBehaviour
                 {
                     DialogueManager.OnContinueButtonClick();
                 }
+
                 else
                 {
-                    currentObject.GetComponent<Interactable>().StartDialogue();
+                    Interactable curInteractable = currentObject.GetComponent<Interactable>();
+
+                    if (curInteractable.HasDialogue())
+                    {
+                        curInteractable.StartDialogue();
+                    }
+
+                    else if (curInteractable.HasTargetScene())
+                    {
+                        curInteractable.ChangeScene();
+                    }
                 }
             }
+
             // if there is an ongoing dialogue, and user clicks on
             // places other than the object, the dialogue will end
             else

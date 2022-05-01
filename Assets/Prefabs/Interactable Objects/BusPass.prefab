@@ -129,6 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 11400000, guid: 6a512006cd7056a418a310bcd3586fc7, type: 2}
+  targetScene: 0
 --- !u!1 &659972606242349657
 GameObject:
   m_ObjectHideFlags: 0

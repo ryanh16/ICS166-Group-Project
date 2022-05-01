@@ -19,4 +19,16 @@ public class Dialogue : ScriptableObject
     {
         return dialogue;
     }
+
+
+    public bool HasSpeakers()
+    {
+        return speakers.Length > 0;
+    }
+
+
+    public bool HasDialogue()
+    {
+        return dialogue.Length > 0;
+    }
 }
