@@ -80,6 +80,7 @@ public class Outline : MonoBehaviour {
 
   private bool needsUpdate;
 
+
   void Awake() {
 
     // Cache renderers
@@ -103,6 +104,7 @@ public class Outline : MonoBehaviour {
     // Apply material properties immediately
     needsUpdate = true;
   }
+
 
   void OnEnable() {
     foreach (var renderer in renderers) {
@@ -142,6 +144,7 @@ public class Outline : MonoBehaviour {
     }
   }
 
+
   void OnDisable() {
     foreach (var renderer in renderers) {
 
@@ -155,12 +158,14 @@ public class Outline : MonoBehaviour {
     }
   }
 
+
   void OnDestroy() {
 
     // Destroy material instances
     Destroy(outlineMaskMaterial);
     Destroy(outlineFillMaterial);
   }
+
 
   void Bake() {
 
@@ -223,6 +228,7 @@ public class Outline : MonoBehaviour {
     }
   }
 
+
   List<Vector3> SmoothNormals(Mesh mesh) {
 
     // Group vertices by location
@@ -274,6 +280,7 @@ public class Outline : MonoBehaviour {
     mesh.SetTriangles(mesh.triangles, mesh.subMeshCount - 1);
   }
 
+
   void UpdateMaterialProperties() {
 
     // Apply properties according to mode
@@ -311,12 +318,15 @@ public class Outline : MonoBehaviour {
         break;
     }
   }
+
+
     public void OnMouseOver()
     {
         outlineColor.a = 255;
         needsUpdate = true;
         ObjectLookingAt.SetCurrentObject(this.gameObject);
     }
+
 
     public void OnMouseExit()
     {
