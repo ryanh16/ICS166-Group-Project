@@ -700,7 +700,7 @@ MonoBehaviour:
     jumpingRequiresStamina: 0
     jumpStaminaRequire: 1
     jumpStaminaCost: 1
-    jumpHeight: 2
+    jumpHeight: 1
     airJump: 1
     airJumpTime: 0.1
     airJumpsAmount: 0
