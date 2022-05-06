@@ -6,7 +6,7 @@ using UnityEngine;
 public class Interactable : MonoBehaviour
 {
     [SerializeField] private Dialogue dialogue;
-    [SerializeField] private SceneTypes.Scenes targetScene;
+    [SerializeField] private Transform targetLocation;
 
 
 
@@ -25,13 +25,22 @@ public class Interactable : MonoBehaviour
     }
 
 
-    public void ChangeScene()
+    public void ChangeLocation()
     {
-        if (HasTargetScene())
-            SceneLoadManager.LoadScene(targetScene);
+        if (HasTargetLocation())
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            CharacterController playerController = player.GetComponent<CharacterController>();
+
+            // TODO: Add code to do fade-out transition
+            playerController.enabled = false;
+            player.transform.position = new Vector3(targetLocation.position.x, targetLocation.position.y + 1, targetLocation.position.z);
+            playerController.enabled = true;
+            // TODO: Add code to do fade-in transition
+        }
 
         else
-            Debug.LogError($"Target scene on Interactable: {this.gameObject.name} set to NONE, should not be loading scene");
+            Debug.LogError($"No target location on Interactable: {this.gameObject.name}");
     }
 
 
@@ -46,8 +55,8 @@ public class Interactable : MonoBehaviour
     }
 
 
-    public bool HasTargetScene()
+    public bool HasTargetLocation()
     {
-        return targetScene != SceneTypes.Scenes.NONE;
+        return targetLocation != null;
     }
 }
