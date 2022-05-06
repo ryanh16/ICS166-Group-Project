@@ -30,30 +30,46 @@ public class InputManager : MonoBehaviour
         {
             if (currentObject)
             {
+                Interactable curInteractable = currentObject.GetComponent<Interactable>();
+
                 if (DialogueManager.IsInDialogue())
                 {
                     DialogueManager.OnContinueButtonClick();
+
+                    // If dialogue ended after advancing and has a target location, teleport
+                    if (!DialogueManager.IsInDialogue() && curInteractable.HasTargetLocation())
+                    {
+                        curInteractable.ChangeLocation();
+                    }
                 }
 
                 else
                 {
-                    Interactable curInteractable = currentObject.GetComponent<Interactable>();
-
+                    // If Interactable has dialogue, start dialogue
                     if (curInteractable.HasDialogue())
                     {
                         curInteractable.StartDialogue();
                     }
 
-                    else if (curInteractable.HasTargetScene())
+                    // If Interactable only has location, teleport to location immediately
+                    else if (curInteractable.HasTargetLocation())
                     {
-                        curInteractable.ChangeScene();
+                        curInteractable.ChangeLocation();
+                    }
+
+                    // If Interactable has neither, object is misconfigured
+                    else
+                    {
+                        Debug.LogError($"{currentObject.name} is Interactable but has neither a Dialogue nor TargetLocation attached, check Inspector values");
                     }
                 }
             }
+        }
 
-            // if there is an ongoing dialogue, and user clicks on
-            // places other than the object, the dialogue will end
-            else
+        // Return/Enter key exits dialogue early
+        if (Input.GetKeyUp(KeyCode.Return))
+        {
+            if (DialogueManager.IsInDialogue())
             {
                 DialogueManager.EndDialogue();
             }
