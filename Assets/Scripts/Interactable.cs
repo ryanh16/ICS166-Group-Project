@@ -30,13 +30,8 @@ public class Interactable : MonoBehaviour
         if (HasTargetLocation())
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
-            CharacterController playerController = player.GetComponent<CharacterController>();
 
-            // TODO: Add code to do fade-out transition
-            playerController.enabled = false;
-            player.transform.position = new Vector3(targetLocation.position.x, targetLocation.position.y + 1, targetLocation.position.z);
-            playerController.enabled = true;
-            // TODO: Add code to do fade-in transition
+            FlashbackUIManager.Instance.Teleport(player, targetLocation);
         }
 
         else
