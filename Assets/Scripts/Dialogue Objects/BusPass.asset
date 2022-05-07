@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BusPass
   m_EditorClassIdentifier: 
   speakers:
-  - me
+  - Me
   dialogue:
   - 0\Oh, I remember this card.
   - 0\I bought this card at the beginning of the Spring quarter because I needed
