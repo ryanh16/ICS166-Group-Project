@@ -5,15 +5,13 @@ public sealed class SceneTypes
     public enum Scenes
     {
         NONE,
-        Bedroom,
-        TEST_SCENE
+        GameplayArea,
     }
 
     private static readonly Dictionary<Scenes, string> sceneNames = new Dictionary<Scenes, string>()
     {
         { Scenes.NONE, null },
-        { Scenes.Bedroom, "Bedroom" },
-        { Scenes.TEST_SCENE, "TEST SCENE" }
+        { Scenes.GameplayArea, "GameplayArea" },
     };
 
 
