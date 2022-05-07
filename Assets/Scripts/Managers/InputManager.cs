@@ -19,9 +19,20 @@ public class InputManager : MonoBehaviour
         // press the space bar to advance the dialogue
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            if (DialogueManager.IsInDialogue())
+            if (currentObject)
             {
-                DialogueManager.OnContinueButtonClick();
+                Interactable curInteractable = currentObject.GetComponent<Interactable>();
+
+                if (DialogueManager.IsInDialogue())
+                {
+                    DialogueManager.OnContinueButtonClick();
+
+                    // If dialogue ended after advancing and has a target location, teleport
+                    if (!DialogueManager.IsInDialogue() && curInteractable.HasTargetLocation())
+                    {
+                        curInteractable.ChangeLocation();
+                    }
+                }
             }
         }
 
