@@ -15,7 +15,7 @@ public class CheckPointManager : MonoBehaviour
 
     public static void SetCurrentCheckPoint(CheckPoint CP)
     {
-        if (LastCheckPoint.GetInstanceID() != CurrentCheckPoint.GetInstanceID())
+        if (LastCheckPoint && LastCheckPoint.GetInstanceID() != CurrentCheckPoint.GetInstanceID())
         {
             LastCheckPoint = CurrentCheckPoint;
         }
@@ -26,5 +26,10 @@ public class CheckPointManager : MonoBehaviour
     {
         CurrentCheckPoint = LastCheckPoint;
         FlashBackManager.Teleport(Player, LastCheckPoint.transform);
+    }
+
+    public static CheckPoint GetCurrentCheckPoint()
+    {
+        return CurrentCheckPoint;
     }
 }

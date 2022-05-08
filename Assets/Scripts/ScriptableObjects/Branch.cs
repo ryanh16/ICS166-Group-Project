@@ -24,6 +24,7 @@ public class Branch : ScriptableObject
     private void Awake()
     {
         DialogueManager.SubscibeToDialogueEnds(WhenDialogueEnds);
+        optionsManager = GameObject.Find("Options").GetComponent<OptionsManager>();
     }
 
     public string GetName()
@@ -33,6 +34,7 @@ public class Branch : ScriptableObject
 
     public virtual void OnClickOnThisBranch()
     {
+        Debug.Log("click on this branch is called");
         if (Options.Length == 0)
         {
             if (Dia)
@@ -41,6 +43,10 @@ public class Branch : ScriptableObject
                 DialogueManager.SetDialogues(Dia);
                 DialogueManager.StartDialogue();
                 PlayerIsInThisBranch = true;
+            }
+            else
+            {
+                optionsManager.CreateButtons(MainBranch.GetOptions());
             }
         }
     }

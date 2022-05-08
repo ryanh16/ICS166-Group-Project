@@ -9,8 +9,6 @@ public class InputManager : MonoBehaviour
 {
     private GameObject currentObject;
 
-
-
     // Update is called once per frame
     private void Update()
     {

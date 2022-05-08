@@ -16,16 +16,18 @@ public class OptionsManager : MonoBehaviour
 
     public void CreateButtons(Branch[] branches)
     {
+        Debug.Log("creating buttons");
         ClearAllButtons();
         for (int i = 0; i < branches.Length; i++)
         {
             Button oneButton = (Button)Instantiate<Button>(ButtonPrefab);
-            oneButton.GetComponent<Text>().text = branches[i].GetName();
-            oneButton.onClick.AddListener(branches[i].OnClickOnThisBranch);
+            oneButton.GetComponentInChildren<Text>().text = branches[i].GetName();
+            oneButton.onClick.AddListener(() => { branches[i].OnClickOnThisBranch(); });
             ButtonList.Add(oneButton);
             oneButton.transform.parent = this.gameObject.transform;
         }
         Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         Player.enabled = false;
     }
 

@@ -23,10 +23,12 @@ public class CheckPoint : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         CheckPointManager.SetCurrentCheckPoint(this.gameObject.GetComponent<CheckPoint>());
+        ObjectLookingAt.SetCurrentObject(this.gameObject);
         if (DialogueInThisCP)
         {
             DialogueManager.SetDialogues(DialogueInThisCP);
             PlayerIsHere = true;
+            DialogueManager.StartDialogue();
         }
     }
 
