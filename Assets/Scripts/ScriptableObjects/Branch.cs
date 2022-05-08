@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Branch", menuName = "Branches/Branch")]
@@ -21,16 +19,20 @@ public class Branch : ScriptableObject
     [SerializeField]
     private bool LeadingToComplete;
 
+
+
     private void Awake()
     {
         DialogueManager.SubscibeToDialogueEnds(WhenDialogueEnds);
         optionsManager = GameObject.Find("Options").GetComponent<OptionsManager>();
     }
 
+
     public string GetName()
     {
         return name;
     }
+
 
     public virtual void OnClickOnThisBranch()
     {
@@ -43,6 +45,7 @@ public class Branch : ScriptableObject
                 DialogueManager.StartDialogue();
                 PlayerIsInThisBranch = true;
             }
+
             else
             {
                 foreach (Branch b in MainBranch.GetOptions())
@@ -52,6 +55,7 @@ public class Branch : ScriptableObject
                 optionsManager.FinishSettingUpButtons();
             }
         }
+
         else
         {
             foreach (Branch b in Options)
@@ -61,6 +65,7 @@ public class Branch : ScriptableObject
             optionsManager.FinishSettingUpButtons();
         }
     }
+
 
     public void WhenDialogueEnds()
     {
@@ -75,10 +80,12 @@ public class Branch : ScriptableObject
         }
     }
 
+
     public bool LeadingToCompleteThisItem()
     {
         return LeadingToComplete;
     }
+
 
     public Branch[] GetOptions()
     {
