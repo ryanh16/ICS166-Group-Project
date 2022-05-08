@@ -12,6 +12,9 @@ public class CheckPointManager : MonoBehaviour
     private static GameObject Player;
     [SerializeField]
     private static FlashbackUIManager FlashBackManager;
+    [SerializeField]
+    [Tooltip("I set this to SerializeField just to make life easier!")]
+    private static Branch CurrentBranch;
 
     public static void SetCurrentCheckPoint(CheckPoint CP)
     {
@@ -31,5 +34,11 @@ public class CheckPointManager : MonoBehaviour
     public static CheckPoint GetCurrentCheckPoint()
     {
         return CurrentCheckPoint;
+    }
+    
+    // Somehow I feel keeping track of current branch can be useful
+    public static void SetCurrentOngoingBranch(Branch currentBranch)
+    {
+        CurrentBranch = currentBranch;
     }
 }

@@ -7,15 +7,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4b2d6b18ad2a494fb87039fd44dcc1c, type: 3}
   m_Name: TestBranch1
   m_EditorClassIdentifier: 
-  Name: This is test branch1
-  Options:
-  - {fileID: 11400000, guid: 062507093b81ffb4f9a4cb84bed61a6e, type: 2}
-  Dia: {fileID: 0}
-  optionsManager: {fileID: 0}
-  MainBranch: {fileID: 11400000}
-  LeadingToComplete: 0
+  OptionsInThisBranch:
+  - {fileID: 11400000, guid: 0f5d1a53c5c91074cbfefe51b5475b3b, type: 2}
+  - {fileID: 11400000, guid: a25395cad0fa0fe42ba3e6331787b0ab, type: 2}

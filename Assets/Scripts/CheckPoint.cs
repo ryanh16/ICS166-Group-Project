@@ -5,20 +5,12 @@ using UnityEngine;
 public class CheckPoint : MonoBehaviour
 {
     [SerializeField]
-    private Branch[] Branches;
+    private Branch BranchInThisCP;
 
     [SerializeField]
     private Dialogue DialogueInThisCP;
 
-    [SerializeField]
-    private OptionsManager optionManager;
-
     private bool PlayerIsHere = false;
-
-    private void Start()
-    {
-        DialogueManager.SubscibeToDialogueEnds(WhenDialogueEnds);
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -26,22 +18,31 @@ public class CheckPoint : MonoBehaviour
         ObjectLookingAt.SetCurrentObject(this.gameObject);
         if (DialogueInThisCP)
         {
+            // if there is any dialogue, play the dialogue first
+            DialogueManager.SubscribeToDialogueEnds(WhenDialogueEnds);
+
             DialogueManager.SetDialogues(DialogueInThisCP);
             PlayerIsHere = true;
             DialogueManager.StartDialogue();
         }
+        else
+        {
+            BranchInThisCP.SetUp();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        PlayerIsHere = false;
     }
 
     private void WhenDialogueEnds()
     {
         if (PlayerIsHere)
         {
-            foreach (Branch b in Branches)
-            {
-                optionManager.CreateButton(b);
-            }
-            optionManager.FinishSettingUpButtons();
             PlayerIsHere = false;
+            DialogueManager.DesubscribeFromDialogueEnds(WhenDialogueEnds);
+            BranchInThisCP.SetUp();
         }
     }
 }

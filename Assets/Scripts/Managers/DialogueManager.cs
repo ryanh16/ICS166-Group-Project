@@ -127,7 +127,7 @@ public class DialogueManager : MonoBehaviour
         isInDia = false;
         goldController.enabled = true;
         animator.SetBool("IsOnScreen", false) ;
-        OnDialogueEndsAction();
+        OnDialogueEndsAction?.Invoke();
     }
 
 
@@ -168,8 +168,13 @@ public class DialogueManager : MonoBehaviour
         return new KeyValuePair<string, string>(Instance.curDialogue.GetSpeaker(int.Parse(splitSentence[0])), splitSentence[1]);
     }
 
-    public static void SubscibeToDialogueEnds(Action act)
+    public static void SubscribeToDialogueEnds(Action action)
     {
-        OnDialogueEndsAction += act;
+        OnDialogueEndsAction += action;
+    }
+
+    public static void DesubscribeFromDialogueEnds(Action action)
+    {
+        OnDialogueEndsAction -= action;
     }
 }
