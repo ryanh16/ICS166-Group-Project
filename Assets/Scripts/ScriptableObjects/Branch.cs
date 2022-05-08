@@ -34,7 +34,6 @@ public class Branch : ScriptableObject
 
     public virtual void OnClickOnThisBranch()
     {
-        Debug.Log("click on this branch is called");
         if (Options.Length == 0)
         {
             if (Dia)
@@ -46,8 +45,20 @@ public class Branch : ScriptableObject
             }
             else
             {
-                optionsManager.CreateButtons(MainBranch.GetOptions());
+                foreach (Branch b in MainBranch.GetOptions())
+                {
+                    optionsManager.CreateButton(b);
+                }
+                optionsManager.FinishSettingUpButtons();
             }
+        }
+        else
+        {
+            foreach (Branch b in Options)
+            {
+                optionsManager.CreateButton(b);
+            }
+            optionsManager.FinishSettingUpButtons();
         }
     }
 
@@ -55,7 +66,11 @@ public class Branch : ScriptableObject
     {
         if (PlayerIsInThisBranch)
         {
-            optionsManager.CreateButtons(MainBranch.GetOptions());
+            foreach (Branch b in MainBranch.GetOptions())
+            {
+                optionsManager.CreateButton(b);
+            }
+            optionsManager.FinishSettingUpButtons();
             PlayerIsInThisBranch = false;
         }
     }

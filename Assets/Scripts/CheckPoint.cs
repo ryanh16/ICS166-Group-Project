@@ -36,7 +36,11 @@ public class CheckPoint : MonoBehaviour
     {
         if (PlayerIsHere)
         {
-            optionManager.CreateButtons(Branches);
+            foreach (Branch b in Branches)
+            {
+                optionManager.CreateButton(b);
+            }
+            optionManager.FinishSettingUpButtons();
             PlayerIsHere = false;
         }
     }

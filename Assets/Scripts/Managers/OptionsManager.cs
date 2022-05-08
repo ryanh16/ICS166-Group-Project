@@ -14,18 +14,19 @@ public class OptionsManager : MonoBehaviour
     [SerializeField]
     private Hertzole.GoldPlayer.GoldPlayerController Player;
 
-    public void CreateButtons(Branch[] branches)
+    public void CreateButton(Branch branch)
     {
-        Debug.Log("creating buttons");
         ClearAllButtons();
-        for (int i = 0; i < branches.Length; i++)
-        {
-            Button oneButton = (Button)Instantiate<Button>(ButtonPrefab);
-            oneButton.GetComponentInChildren<Text>().text = branches[i].GetName();
-            oneButton.onClick.AddListener(() => { branches[i].OnClickOnThisBranch(); });
-            ButtonList.Add(oneButton);
-            oneButton.transform.parent = this.gameObject.transform;
-        }
+        Button oneButton = (Button)Instantiate<Button>(ButtonPrefab);
+        oneButton.GetComponentInChildren<Text>().text = branch.GetName();
+        oneButton.onClick.AddListener(() => { branch.OnClickOnThisBranch(); });
+        ButtonList.Add(oneButton);
+        oneButton.transform.parent = this.gameObject.transform;
+        Debug.Log($"added new item to buttonlist, now it has {ButtonList.Count} items");
+    }
+
+    public void FinishSettingUpButtons()
+    {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         Player.enabled = false;
@@ -33,11 +34,17 @@ public class OptionsManager : MonoBehaviour
 
     public void ClearAllButtons()
     {
+        /*Debug.Log($"clearing button list, before it has {ButtonList.Count} items");
         foreach (Button b in ButtonList)
         {
+            if (b == null)
+            {
+                Debug.Log("b is null");
+            }
             ButtonList.Remove(b);
             Destroy(b);
-        }
+        }*/
+        Debug.Log("clearing all buttons");
         Cursor.visible = false;
         Player.enabled = true;
     }
