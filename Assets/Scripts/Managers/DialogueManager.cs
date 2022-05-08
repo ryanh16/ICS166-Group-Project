@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 // This class is a simple Singleton class that handles the dialogue box that will 
 // appear most of the time. Right now the animation for the dialogue box to appear 
@@ -30,7 +31,7 @@ public class DialogueManager : MonoBehaviour
 
     private static DialogueManager Instance;
 
-
+    private static Action OnDialogueEndsAction;
 
     private void Start()
     {
@@ -40,7 +41,6 @@ public class DialogueManager : MonoBehaviour
         dialogueText = dialogueBox.transform.GetChild(1).GetComponent<Text>();
         goldController = playerObject.GetComponent<Hertzole.GoldPlayer.GoldPlayerController>();
     }
-
 
     private void OnDestroy()
     {
@@ -127,6 +127,7 @@ public class DialogueManager : MonoBehaviour
         isInDia = false;
         goldController.enabled = true;
         animator.SetBool("IsOnScreen", false) ;
+        OnDialogueEndsAction();
     }
 
 
@@ -165,5 +166,10 @@ public class DialogueManager : MonoBehaviour
         }
 
         return new KeyValuePair<string, string>(Instance.curDialogue.GetSpeaker(int.Parse(splitSentence[0])), splitSentence[1]);
+    }
+
+    public static void SubscibeToDialogueEnds(Action act)
+    {
+        OnDialogueEndsAction += act;
     }
 }
