@@ -22,7 +22,7 @@ public class OptionsManager : MonoBehaviour
     private static List<Button> ButtonList = new List<Button>();
 
     [SerializeField]
-    private static float MarginBetweenButtons = 10;
+    private static float MarginBetweenButtons = 50;
 
     private static bool CurrentlyInBranch = false;
 
@@ -83,7 +83,7 @@ public class OptionsManager : MonoBehaviour
         else
         {
             // Odd situation
-            int HalfOfNumber = NumberofButtons / 2; // grounding?
+            int HalfOfNumber = NumberofButtons / 2; // grounding in math?
             float HalfOfNumberFloat =  NumberofButtons / (float) 2.0;
             for (int i = 0; i < NumberofButtons; i++)
             {

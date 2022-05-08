@@ -40,6 +40,16 @@ public class InputManager : MonoBehaviour
             if (currentObject)
             {
                 Interactable curInteractable = currentObject.GetComponent<Interactable>();
+                CheckPoint curCheckPoint = currentObject.GetComponent<CheckPoint>();
+
+                if (curCheckPoint)
+                {
+                    if (curCheckPoint.CanManullyActivate())
+                    {
+                        curCheckPoint.ManuallyActivateCheckPoint();
+                        return;
+                    }
+                }
 
                 if (DialogueManager.IsInDialogue())
                 {
@@ -82,6 +92,8 @@ public class InputManager : MonoBehaviour
             {
                 DialogueManager.EndDialogue();
             }
+            OptionsManager.ClearAllCurrentButtons();
+            OptionsManager.EndOnThisBranch();
         }
     }
 }

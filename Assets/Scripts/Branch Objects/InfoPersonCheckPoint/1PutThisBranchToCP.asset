@@ -7,13 +7,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4b2d6b18ad2a494fb87039fd44dcc1c, type: 3}
-  m_Name: TestBranch1
+  m_Name: 1PutThisBranchToCP
   m_EditorClassIdentifier: 
   OptionsInThisBranch:
-  - {fileID: 11400000, guid: 0f5d1a53c5c91074cbfefe51b5475b3b, type: 2}
-  - {fileID: 11400000, guid: a25395cad0fa0fe42ba3e6331787b0ab, type: 2}
-  - {fileID: 11400000, guid: 161d9127bdadf034bb7f42b063c6a956, type: 2}
-  - {fileID: 11400000, guid: 1a67ff9f50b9b0e4bbce7f133c893658, type: 2}
+  - {fileID: 11400000, guid: 1a83b741e7acf374cbc04356979c7c87, type: 2}
+  - {fileID: 11400000, guid: 8b7ef121af06dab48b3068812be58d58, type: 2}
+  - {fileID: 11400000, guid: a45058ce1a17ed04eb77afaa242460e3, type: 2}
