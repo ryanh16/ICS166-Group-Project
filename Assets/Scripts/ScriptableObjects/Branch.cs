@@ -19,12 +19,11 @@ public class Branch : ScriptableObject
     [SerializeField]
     private bool LeadingToComplete;
 
-
-
-    private void Awake()
+    public void SetOptionsManager(OptionsManager om)
     {
+        optionsManager = om;
+        // since Awake is not working properly, I will need to put the subscribe method here
         DialogueManager.SubscibeToDialogueEnds(WhenDialogueEnds);
-        optionsManager = GameObject.Find("Options").GetComponent<OptionsManager>();
     }
 
 
@@ -40,6 +39,7 @@ public class Branch : ScriptableObject
         {
             if (Dia)
             {
+                Debug.Log("this should be called by test branch2");
                 optionsManager.ClearAllButtons();
                 DialogueManager.SetDialogues(Dia);
                 DialogueManager.StartDialogue();
@@ -60,6 +60,10 @@ public class Branch : ScriptableObject
         {
             foreach (Branch b in Options)
             {
+                if (optionsManager == null)
+                {
+                    Debug.Log("optionsManager is null");
+                }
                 optionsManager.CreateButton(b);
             }
             optionsManager.FinishSettingUpButtons();
@@ -69,12 +73,12 @@ public class Branch : ScriptableObject
 
     public void WhenDialogueEnds()
     {
+        Debug.Log("this should be called when the dia in test branch2 finishes");
+        Debug.Log($"and playerisinDia is {PlayerIsInThisBranch}");
         if (PlayerIsInThisBranch)
         {
-            foreach (Branch b in MainBranch.GetOptions())
-            {
-                optionsManager.CreateButton(b);
-            }
+            Debug.Log("this should be called when the dia in test branch2 finishes");
+            optionsManager.CreateButton(MainBranch);
             optionsManager.FinishSettingUpButtons();
             PlayerIsInThisBranch = false;
         }

@@ -22,6 +22,7 @@ public class OptionsManager : MonoBehaviour
         oneButton.onClick.AddListener(() => { branch.OnClickOnThisBranch(); });
         ButtonList.Add(oneButton);
         oneButton.transform.parent = this.gameObject.transform;
+        branch.SetOptionsManager(this);
         Debug.Log($"added new item to buttonlist, now it has {ButtonList.Count} items");
     }
 
@@ -34,18 +35,22 @@ public class OptionsManager : MonoBehaviour
 
     public void ClearAllButtons()
     {
-        /*Debug.Log($"clearing button list, before it has {ButtonList.Count} items");
-        foreach (Button b in ButtonList)
+        foreach (Transform button in this.transform)
         {
-            if (b == null)
-            {
-                Debug.Log("b is null");
-            }
-            ButtonList.Remove(b);
-            Destroy(b);
-        }*/
-        Debug.Log("clearing all buttons");
+            Destroy(button.gameObject);
+        }
+        ButtonList.Clear();
         Cursor.visible = false;
         Player.enabled = true;
+    }
+
+    private void LateUpdate()
+    {
+        if (ButtonList.Count != 0)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            Player.enabled = false;
+        }
     }
 }

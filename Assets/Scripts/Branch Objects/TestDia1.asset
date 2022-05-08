@@ -15,5 +15,5 @@ MonoBehaviour:
   speakers:
   - me
   dialogue:
-  - 0/this is just a test dia
-  - 0/the game should return to test branch1 after this ends
+  - 0\this is just a test dia
+  - 0\the game should return to test branch1 after this ends
