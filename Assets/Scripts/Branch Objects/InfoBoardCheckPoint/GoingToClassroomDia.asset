@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6edbe1f8d548f21498dd1d319f03a353, type: 3}
+  m_Name: GoingToClassroomDia
+  m_EditorClassIdentifier: 
+  speakers:
+  - me
+  - Narrator
+  dialogue:
+  - 0\It's TWENTY minutes!
+  - 0\Who will want to stand here and wait for TWENTY minutes!
+  - 0\I will go take the class first and come back later.
+  - 1\After finish the class, you come back and purchase the bus pass.
+  - 1\And just because of this, you don't catch up the bus and spend another $10
+    going back home.
+  - 1\You lose the game!

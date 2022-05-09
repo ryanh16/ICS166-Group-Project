@@ -90,7 +90,10 @@ public class CheckPoint : MonoBehaviour
         {
             PlayerIsHere = false;
             DialogueManager.DesubscribeFromDialogueEnds(WhenDialogueEnds);
-            BranchInThisCP.SetUp();
+            if (BranchInThisCP)
+            {
+                BranchInThisCP.SetUp();
+            }
         }
     }
 }

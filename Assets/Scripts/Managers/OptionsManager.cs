@@ -52,6 +52,8 @@ public class OptionsManager : MonoBehaviour
             Destroy(button.gameObject);
         }
         ButtonList.Clear();
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // This method should be called after setting everything up. Once this method 

@@ -22,7 +22,7 @@ public class Option : ScriptableObject
 
     [SerializeField]
     [Tooltip("I set this to SerializeField just to make life easier!")]
-    private bool PlayerIsInThisBranch = false;
+    protected bool PlayerIsInThisBranch = false;
 
     public string GetName()
     {
@@ -32,7 +32,7 @@ public class Option : ScriptableObject
     // OnClickOnThisOption() is added as a listener to cooresponding buttons
     // When button is clicked, the cooresponding ScriptableObject's this
     // method will be called 
-    public void OnClickOnThisOption()
+    public virtual void OnClickOnThisOption()
     {
         if (DialogueToStart)
         {
@@ -70,7 +70,7 @@ public class Option : ScriptableObject
 
     // OnDialogueEnds() will decide the what will happen after the dialogue ends
     // I copied and pasted all comments in this method from OnClickOnThisOption()
-    public void OnDialogueEnds()
+    public virtual void OnDialogueEnds()
     {
         if (PlayerIsInThisBranch)
         {

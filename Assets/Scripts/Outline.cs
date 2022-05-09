@@ -333,6 +333,7 @@ public class Outline : MonoBehaviour {
         outlineColor.a = 0;
         needsUpdate = true;
         GameObject currentObj = ObjectLookingAt.GetCurrentObject();
+
         if (currentObj)
         {
             // if the current object player is looking at is different from this gameObject,
@@ -343,5 +344,21 @@ public class Outline : MonoBehaviour {
                 ObjectLookingAt.RemoveCurrentObject();
             }
         }
+
+        // Following code solves the problem that during a checkpoint dialogue, when player moves mouse
+        // somewhere else, the dialogue cannot be advanced pressing spacebar
+        // But it seems to lead to another bug
+
+        /*CheckPoint CP = currentObj.GetComponent<CheckPoint>();
+        if (currentObj)
+        {
+            // if the current object player is looking at is different from this gameObject,
+            // this means the ObjectLookingAt class has been updated with the latest object
+            // player is looking at, and thus this class does not need to removeCurrentObject()
+            if (!CP && currentObj.GetInstanceID() == this.gameObject.GetInstanceID())
+            {
+                ObjectLookingAt.RemoveCurrentObject();
+            }
+        }*/
     }
 }
