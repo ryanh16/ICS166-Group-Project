@@ -15,11 +15,13 @@ public class EndingOption : Option
         PlayerIsInThisBranch = false;
         DialogueManager.DesubscribeFromDialogueEnds(OnDialogueEnds);
 
-        EndingManager EM = GameObject.Find("EndingManager").GetComponent<EndingManager>();
-        EM.Ending();
-
         OptionsManager.ClearAllCurrentButtons();
         OptionsManager.EndOnThisBranch();
         DialogueManager.EndDialogue();
+
+
+        EndingManager EM = GameObject.Find("EndingManager").GetComponent<EndingManager>();
+        EM.enabled = true;
+        EM.Ending();
     }
 }

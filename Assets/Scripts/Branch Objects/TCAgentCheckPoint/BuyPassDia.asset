@@ -15,6 +15,7 @@ MonoBehaviour:
   speakers:
   - Transportation Center Agent
   - me
+  - Narrator
   dialogue:
   - 1\Hi, I'd like to buy a 1 year bus pass card.
   - 0\Yeah, I can help you with that.
@@ -31,3 +32,5 @@ MonoBehaviour:
   - 1\Oh, I'm good for today, thank you!
   - 0\Alright, have a good day!
   - 1\You too!
+  - 2\Congratulations! You made it to the end!
+  - 2\You will be teleported back to the room now!

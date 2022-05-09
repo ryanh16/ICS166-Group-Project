@@ -9,11 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 484c1937a0b451b47a2963aaf9252250, type: 3}
-  m_Name: TestOption4
+  m_Script: {fileID: 11500000, guid: 6edbe1f8d548f21498dd1d319f03a353, type: 3}
+  m_Name: GiantTree
   m_EditorClassIdentifier: 
-  Name: 4This does nothing
-  DialogueToStart: {fileID: 0}
-  FollowingBranch: {fileID: 0}
-  MainBranch: {fileID: 0}
-  PlayerIsInThisBranch: 0
+  speakers:
+  - me
+  - Developer
+  dialogue:
+  - 0\Dang! That's a giant tall tree!
+  - 0\Are developers inspired by the Erdtree in "Elden Ring"?
+  - 1\hahahahahaha

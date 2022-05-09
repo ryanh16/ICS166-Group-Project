@@ -8,16 +8,28 @@ public class EndingManager : MonoBehaviour
     private Dialogue Dia;
     [SerializeField]
     private GameObject Player;
+    [SerializeField]
+    private Transform SpawnPoint;
 
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            DialogueManager.OnContinueButtonClick();
+        }
+    }
 
     public void Ending()
     {
-        Player.transform.position = new Vector3((float) 1.75, (float) 2.37, (float) 0.79);
+        Player.transform.position = SpawnPoint.position;
+        Player.transform.rotation = SpawnPoint.rotation;
         BackGround.SetActive(true);
         Player.GetComponent<Hertzole.GoldPlayer.GoldPlayerController>().enabled = false;
+
         DialogueManager.SetDialogues(Dia);
         DialogueManager.StartDialogue();
         DialogueManager.SubscribeToDialogueEnds(OnDialogueEnds);
+
     }
 
     public void OnDialogueEnds()
@@ -25,5 +37,6 @@ public class EndingManager : MonoBehaviour
         DialogueManager.DesubscribeFromDialogueEnds(OnDialogueEnds);
         BackGround.SetActive(false);
         Player.GetComponent<Hertzole.GoldPlayer.GoldPlayerController>().enabled = true;
+        this.gameObject.SetActive(false);
     }
 }
