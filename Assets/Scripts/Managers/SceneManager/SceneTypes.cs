@@ -6,12 +6,14 @@ public sealed class SceneTypes
     {
         NONE,
         GameplayArea,
+        Sounds,
     }
 
     private static readonly Dictionary<Scenes, string> sceneNames = new Dictionary<Scenes, string>()
     {
         { Scenes.NONE, null },
         { Scenes.GameplayArea, "GameplayArea" },
+        { Scenes.Sounds, "Sounds" },
     };
 
 
