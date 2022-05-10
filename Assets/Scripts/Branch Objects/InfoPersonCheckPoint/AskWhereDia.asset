@@ -14,10 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakers:
   - Info Person
-  - me
+  - Me
   dialogue:
-  - 1\I wonder where can I go to purchase this bus pass?
-  - '0\So, if you go outside of this building, and follow the road to the right, '
-  - 0\you should see a similar building to this.
-  - 0\You will be able to purchase the bus pass in that building.
+  - 1\Where can I purchase this bus pass?
+  - 0\If you leave this building and follow the road to the right, you should see
+    a building similar to this one. You'll be able to purchase passes in that building.
   - 1\Great! Thank you!

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WhyAmIHere
   m_EditorClassIdentifier: 
   speakers:
-  - me
+  - Me
   dialogue:
   - 0\Why am I here?
   - 0\What am I doing???

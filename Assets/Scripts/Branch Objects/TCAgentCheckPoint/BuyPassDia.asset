@@ -14,23 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakers:
   - Transportation Center Agent
-  - me
+  - Me
   - Narrator
   dialogue:
-  - 1\Hi, I'd like to buy a 1 year bus pass card.
-  - 0\Yeah, I can help you with that.
-  - 0\Just let me check first.
-  - 0\......
-  - 0\The price will be $169 with tax, is that okay?
-  - 1\Yeah, and I'm gonna pay with my credit.
-  - 0\Of course, just insert it into the card reader, and wait for a few seconds
-    please.
-  - 0\......
-  - 0\Alright, transaction complete, here's your card!
+  - 1\Hi, I'd like to buy a 1-year bus pass card.
+  - 0\Yeah, I can help you with that. Just let me check the price first.
+  - 0\... ... ... ... ...
+  - 0\The price is going to be $169 with tax, is that okay?
+  - 1\Yeah, I'm gonna pay with my credit card.
+  - 0\Of course, just insert it into the card reader and wait for a few seconds please.
+  - 0\... ... ... ... ...
+  - 0\Alright, you're all set! Here's your card.
   - 1\Cool, thank you!
-  - 0\You are welcome! Anything else can I help you?
+  - 0\You're welcome! Anything else I can help you with?
   - 1\Oh, I'm good for today, thank you!
   - 0\Alright, have a good day!
   - 1\You too!
   - 2\Congratulations! You made it to the end!
-  - 2\You will be teleported back to the room now!
+  - 2\You will be teleported back to your room now.

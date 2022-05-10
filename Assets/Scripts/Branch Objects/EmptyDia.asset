@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EmptyDia
   m_EditorClassIdentifier: 
   speakers:
-  - me
+  - Me
   dialogue:
   - 0\That seems like a checkpoint!
-  - 0\I wonder what would happen there!
+  - 0\I wonder what would happen if I touched it?

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Katana
   m_EditorClassIdentifier: 
   speakers:
-  - me
+  - Me
   dialogue:
   - 0\That's a nice log right there!
   - 0\It will be a good fit for my Katana's hilt!

@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakers:
   - Info Person
-  - me
+  - Me
   dialogue:
-  - 1\Alright, I already got what I need!
+  - 1\Alright, I got what I needed!
   - 1\Thanks for your help!
   - 0\You are welcome! Have a good day!
   - 1\You too!

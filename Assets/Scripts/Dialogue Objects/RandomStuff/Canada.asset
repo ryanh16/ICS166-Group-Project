@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Canada
   m_EditorClassIdentifier: 
   speakers:
-  - me
+  - Me
   dialogue:
   - 0\Oh!
   - 0\Canada!?
-  - 0\Why do I say that???
+  - 0\...Why did I say that?

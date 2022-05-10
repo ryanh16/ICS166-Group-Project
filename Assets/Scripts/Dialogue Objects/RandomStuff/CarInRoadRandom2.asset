@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakers:
   - Bus Driver
-  - me
+  - Me
   dialogue:
   - 0\You first!
   - 1\Thank you!

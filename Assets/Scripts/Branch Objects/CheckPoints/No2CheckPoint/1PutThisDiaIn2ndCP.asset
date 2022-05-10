@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1PutThisDiaIn2ndCP
   m_EditorClassIdentifier: 
   speakers:
-  - me
+  - Me
   dialogue:
-  - 0\I wonder if anyone inside this building can help me.
-  - 0\Guess I am about to find out.
+  - 0\I wonder if anyone inside this building can help me?
+  - 0\Guess I'm about to find out.

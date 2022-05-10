@@ -13,7 +13,7 @@ public class EndingOption : Option
     public override void OnDialogueEnds()
     {
         PlayerIsInThisBranch = false;
-        DialogueManager.DesubscribeFromDialogueEnds(OnDialogueEnds);
+        DialogueManager.UnsubscribeFromDialogueEnds(OnDialogueEnds);
 
         OptionsManager.ClearAllCurrentButtons();
         OptionsManager.EndOnThisBranch();

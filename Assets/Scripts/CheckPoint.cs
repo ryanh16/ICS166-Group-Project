@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CheckPoint : MonoBehaviour
@@ -14,12 +12,14 @@ public class CheckPoint : MonoBehaviour
 
     [SerializeField]
     [Tooltip("This distance determines how close should player be to this GameObject in order to start the branch.\n" +
-        "If you don't want to allow maunal activate on this GameObject then don't assign this field.")]
-    private float Distance = 10;
+        "If you don't want to allow maunal activation on this GameObject then don't assign this field.")]
+    private float Distance = 10.0f;
 
     [SerializeField]
-    [Tooltip("If you don't want to allow maunal activate on this GameObject then don't assign this field.")]
+    [Tooltip("If you don't want to allow manual activation on this GameObject then don't assign this field.")]
     private GameObject Player;
+
+
 
     // Auto activate checkpoint when player touches the checkpoint
     private void OnTriggerEnter(Collider other)
@@ -41,13 +41,14 @@ public class CheckPoint : MonoBehaviour
         }
     }
 
+
     // This method is just used to manually activate the checkpoint
     // used in gameobjects like info person, etc.
     public void ManuallyActivateCheckPoint()
     {
         if (Player == null)
         {
-            Debug.LogError($"CheckPoint GameObject {gameObject.name} cannot be manully activated!");
+            Debug.LogError($"CheckPoint GameObject {gameObject.name} cannot be manually activated!");
         }
 
         CheckPointManager.SetCurrentCheckPoint(this.gameObject.GetComponent<CheckPoint>());
@@ -61,41 +62,47 @@ public class CheckPoint : MonoBehaviour
             PlayerIsHere = true;
             DialogueManager.StartDialogue();
         }
+
         else
         {
             BranchInThisCP.SetUp();
         }
     }
 
+
     private void OnTriggerExit(Collider other)
     {
         PlayerIsHere = false;
     }
 
-    public bool CanManullyActivate()
+
+    public bool CanManuallyActivate()
     {
         if (Player == null || Vector3.Distance(Player.transform.position, this.transform.position) > Distance)
         {
             return false;
         }
+
         else
         {
             return true;
         }
     }
 
+
     private void WhenDialogueEnds()
     {
         if (PlayerIsHere)
         {
             PlayerIsHere = false;
-            DialogueManager.DesubscribeFromDialogueEnds(WhenDialogueEnds);
+            DialogueManager.UnsubscribeFromDialogueEnds(WhenDialogueEnds);
             if (BranchInThisCP)
             {
                 BranchInThisCP.SetUp();
             }
         }
     }
+
 
     public bool IsInteractingWithPlayer()
     {

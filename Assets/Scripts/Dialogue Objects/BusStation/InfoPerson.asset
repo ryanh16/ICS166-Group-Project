@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6edbe1f8d548f21498dd1d319f03a353, type: 3}
-  m_Name: Timeis712
+  m_Name: InfoPerson
   m_EditorClassIdentifier: 
   speakers:
-  - Screen
+  - Me
   dialogue:
-  - 0\The Current Time is 7:12AM
+  - 0\I guess I can ask that info person about the price of a bus pass.
+  - 0\Oh yeah, I also need to find out where I can purchase one!
