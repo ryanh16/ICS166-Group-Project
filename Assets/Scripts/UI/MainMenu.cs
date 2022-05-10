@@ -4,7 +4,7 @@ public class MainMenu : MonoBehaviour
 {
     public void onStartButtonClick()
     {
-        SceneLoadManager.LoadScene(SceneTypes.Scenes.Sounds);
+        SceneLoadManager.LoadScene(SceneTypes.Scenes.GameplayArea);
     }
 
 
