@@ -40,13 +40,13 @@ public class OptionsManager : MonoBehaviour
     {
         Button oneButton = (Button)Instantiate<Button>(ButtonPrefab, OptionsParent);
         oneButton.GetComponentInChildren<TextMeshProUGUI>().text = option.GetName();
-        // oneButton.transform.position = OptionsParent.transform.position;
         oneButton.onClick.AddListener(() => { option.OnClickOnThisOption(); });
         ButtonList.Add(oneButton);
     }
 
 
     // Call this *once* before creating any new buttons or when finished on this branch
+    // This method will delete every button on the screen
     public static void ClearAllCurrentButtons()
     {
         foreach (Transform button in OptionsParent)
@@ -63,6 +63,8 @@ public class OptionsManager : MonoBehaviour
     {
         // Should add code to arrange buttons properly
         // probably add it here
+
+        // ==========START OF MATH==========
         int NumberofButtons = ButtonList.Count;
         
         if (NumberofButtons % 2 == 0)
@@ -111,6 +113,8 @@ public class OptionsManager : MonoBehaviour
             }
         }
 
+        // ==========END OF MATH==========
+
         CurrentlyInBranch = true;
         PlayerController.enabled = false;
     }
@@ -124,13 +128,13 @@ public class OptionsManager : MonoBehaviour
         PlayerController.enabled = true;
     }
 
-
+    // This returns if player is still interacting with any checkpoint
     public static bool IsCurrentlyInBranch()
     {
         return CurrentlyInBranch;
     }
 
-
+    // This returns if there are any buttons right now on the screen
     public static bool HasButtonsOnScreen()
     {
         return ButtonList.Count != 0;

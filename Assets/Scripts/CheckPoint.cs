@@ -75,7 +75,8 @@ public class CheckPoint : MonoBehaviour
         PlayerIsHere = false;
     }
 
-
+    // This method determine if the game object can be manully activated or not;
+    // if yes, then it checks if  player is within the min Distance to activate or not
     public bool CanManuallyActivate()
     {
         if (Player == null || Vector3.Distance(Player.transform.position, this.transform.position) > Distance)

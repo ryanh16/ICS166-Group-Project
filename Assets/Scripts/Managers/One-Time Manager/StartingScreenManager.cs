@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// I made this as a substitution because of the camera depth issue happening.
+// But this should be trash now.
 public class StartingScreenManager : MonoBehaviour
 {
     [SerializeField]

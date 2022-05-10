@@ -1,5 +1,13 @@
 using UnityEngine;
 
+// This is an one time manager that deals with the ending.
+// When the player reaches the ending, this Manager will be 
+// enabled, and thus allow player to advance the dialogue.
+// The ending includes two parts:
+// 1. Teleport the player to the room area, this is done in Ending()
+//    or OnDialogueEnds() if we supply any dialogues;
+// 2. Show up a thanks for playing dialogue and enable players to move.
+//    This is done in OnTeleportEnds().
 public class EndingManager : MonoBehaviour
 {
     [SerializeField]

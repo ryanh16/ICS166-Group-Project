@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// This is an one time manager that will be enabled after player chooses 
+// to wait for 20 mins outside the transportation center.
+// This manager also allows player to skip this 20 mins if they find
+// the secret behind the transportation center.
 public class WaitingManager : MonoBehaviour
 {
     [SerializeField]

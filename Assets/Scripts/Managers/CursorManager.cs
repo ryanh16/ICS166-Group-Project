@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+// This class just deals with the cursor according to the game state
 public class CursorManager : MonoBehaviour
 {
     [SerializeField]
