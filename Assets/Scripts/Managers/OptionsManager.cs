@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class OptionsManager : MonoBehaviour
 {
@@ -37,7 +38,7 @@ public class OptionsManager : MonoBehaviour
     public static void CreateButton(Option option)
     {
         Button oneButton = (Button)Instantiate<Button>(ButtonPrefab);
-        oneButton.GetComponentInChildren<Text>().text = option.GetName();
+        oneButton.GetComponentInChildren<TextMeshProUGUI>().text = option.GetName();
         // oneButton.transform.position = OptionsParent.transform.position;
         oneButton.transform.SetParent(OptionsParent);
         oneButton.onClick.AddListener(() => { option.OnClickOnThisOption(); });
