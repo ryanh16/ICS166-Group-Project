@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: BuyBusPassDia
   m_EditorClassIdentifier: 
   speakers:
-  - me
+  - Me
   dialogue:
-  - 0\Alright, I still have one year to graduate.
-  - 0\I remember my friend tells me there is a bus pass for 1 year.
+  - 0\Alright, I still have one year until I graduate.
+  - 0\My friend told me that there's a bus pass that's valid for 1 year.
   - 0\I should purchase it, since I don't plan to buy a car for the rest of my college
     life.

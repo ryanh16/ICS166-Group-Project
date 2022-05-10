@@ -13,13 +13,12 @@ MonoBehaviour:
   m_Name: GoingToClassroomDia
   m_EditorClassIdentifier: 
   speakers:
-  - me
+  - Me
   - Narrator
   dialogue:
-  - 0\It's TWENTY minutes!
-  - 0\Who will want to stand here and wait for TWENTY minutes!
-  - 0\I will go take the class first and come back later.
-  - 1\After finish the class, you come back and purchase the bus pass.
-  - 1\And just because of this, you don't catch up the bus and spend another $10
-    going back home.
+  - 0\I have to wait here for TWENTY minutes!?
+  - 0\Who wants to stand here and wait for TWENTY MINUTES!?
+  - 0\I'll go to class first and come back later.
+  - 1\After finishing class, you come back and purchase the bus pass.
+  - 1\Because of this, you missed the bus and spend another $10 returning back home.
   - 1\You lose the game!

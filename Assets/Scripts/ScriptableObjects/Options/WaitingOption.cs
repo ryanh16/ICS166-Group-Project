@@ -13,7 +13,7 @@ public class WaitingOption : Option
     public override void OnDialogueEnds()
     {
         PlayerIsInThisBranch = false;
-        DialogueManager.DesubscribeFromDialogueEnds(OnDialogueEnds);
+        DialogueManager.UnsubscribeFromDialogueEnds(OnDialogueEnds);
 
         WaitingManager WM = GameObject.Find("WaitingManager").GetComponent<WaitingManager>();
         WM.StartCounting();

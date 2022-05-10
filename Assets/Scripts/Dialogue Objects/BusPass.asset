@@ -16,27 +16,26 @@ MonoBehaviour:
   - Me
   dialogue:
   - 0\Oh, I remember this card.
-  - 0\I bought this card at the beginning of the Spring quarter because I needed
-    to take the bus to campus.
+  - 0\I bought this card at the beginning of Spring Quarter because I needed to take
+    the bus to campus.
   - 0\That was the first day of the quarter and I had a class at 8 AM that morning,
-    but I wanted to buy it before the class, so I went to campus early that day.
-  - 0\I arrived at the campus around 7:10 and found out the Transportation center
-    opens at 7:45.
-  - 0\The transportation center was very old, there wasn't even a chair outside the
-    office. I had to stand there and wait for half an hour.
+    but I wanted to buy it before class, so I went to campus early that day.
+  - 0\I arrived on campus at around 7:10AM and found out that the Transportation
+    Center opens at 7:45AM.
+  - 0\The Transportation Center was very old, there wasn't even a chair outside the
+    office. I had to stand there and wait for twenty minutes.
   - "0\\When the office finally opened, I rushed in and bought the 1-year bus pass
-    very quickly because I didn\u2019t want to be late for the first class."
-  - "0\\So here comes the consequences: I didn\u2019t ask or even notice that the
-    1-year time period stands for one academic year."
+    because I didn\u2019t want to be late for class."
+  - "0\\Unfortunately, I didn\u2019t ask or even notice that the 1-year time period
+    only lasted until the end of the academic year."
   - 0\This meant that I could only use this card for the next 3 months while I paid
     the full price for a 1-year bus pass.
-  - '0\So the next morning I came to the Transportation center again trying to refund
-    this card.  '
-  - '0\When the office finally opened, the officer inside told me that they only
-    sell this card but do not have the right to refund it, '
-  - "0\\and only the County\u2019s transportation center\u2019s people can help me
-    with this. "
-  - "0\\I spent another day commuting to the County\u2019s transportation center,
-    explaining everything and filling out several forms required for the refund.  "
-  - 0\After an entire day, I finally returned that 1-year bus pass but was charged
-    at a daily rate for the past few days.
+  - 0\So the next morning, I came to the Transportation Center again trying to refund
+    this card.
+  - "0\\When the office finally opened, the employee inside told me that they didn't
+    have the ability to refund it, and that only the Orange County Transportation
+    Center\u2019s people could help me with that."
+  - "0\\I spent another day commuting to the county\u2019s Transportation Center,
+    explaining everything and filling out several forms required for the refund."
+  - 0\After an entire day I finally returned that 1-year bus pass, but I was charged
+    at a daily rate for a few days.

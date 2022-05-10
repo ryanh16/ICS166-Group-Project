@@ -7,7 +7,24 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
+    [SerializeField] private FlashbackUIManager FM;
     private GameObject currentObject;
+
+    public static InputManager Instance;
+
+
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+
+    private void OnDestroy()
+    {
+        Instance = null;
+    }
+
 
     // Update is called once per frame
     private void Update()
@@ -37,14 +54,16 @@ public class InputManager : MonoBehaviour
         // left mouse button click to start or advance the dialogue
         if (Input.GetMouseButtonUp(0))
         {
-            if (currentObject)
+            // If a valid interactable object is being hovered over, no flashback teleport is occurring,
+            // and no options are being displayed to the player
+            if (currentObject && !FM.IsDuringTeleport() && !OptionsManager.HasButtonsOnScreen())
             {
                 Interactable curInteractable = currentObject.GetComponent<Interactable>();
                 CheckPoint curCheckPoint = currentObject.GetComponent<CheckPoint>();
 
                 if (curCheckPoint)
                 {
-                    if (curCheckPoint.CanManullyActivate())
+                    if (!DialogueManager.IsInDialogue() && !OptionsManager.IsCurrentlyInBranch() && curCheckPoint.CanManuallyActivate())
                     {
                         curCheckPoint.ManuallyActivateCheckPoint();
                         return;

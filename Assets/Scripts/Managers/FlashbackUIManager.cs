@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using System;
 
 public class FlashbackUIManager : MonoBehaviour
 {
@@ -9,7 +10,9 @@ public class FlashbackUIManager : MonoBehaviour
 
     public static FlashbackUIManager Instance;
 
+    private Action OnTeleportEndsAction;
 
+    private bool isDuringTeleport = false;
 
     private void Awake()
     {
@@ -25,9 +28,14 @@ public class FlashbackUIManager : MonoBehaviour
         Instance = null;
     }
 
+    public bool IsDuringTeleport()
+    {
+        return isDuringTeleport;
+    }
 
     public void Teleport(GameObject playerObject, Transform targetLocation)
     {
+        isDuringTeleport = true;
         StartCoroutine(StartTeleport(playerObject, targetLocation));
     }
 
@@ -35,19 +43,36 @@ public class FlashbackUIManager : MonoBehaviour
     private IEnumerator StartTeleport(GameObject playerObject, Transform targetLocation)
     {
         CharacterController playerController = playerObject.GetComponent<CharacterController>();
+        Hertzole.GoldPlayer.GoldPlayerController goldPlayerController = playerObject.GetComponent<Hertzole.GoldPlayer.GoldPlayerController>();
 
         flashbackUI.SetActive(true);
+        goldPlayerController.enabled = false;
 
         flashbackUIPanel.Play("Fade_Out");
         yield return new WaitForSeconds(clips[0].length);
 
         playerController.enabled = false;
         playerObject.transform.position = new Vector3(targetLocation.position.x, targetLocation.position.y + 1, targetLocation.position.z);
+        playerObject.transform.rotation = targetLocation.rotation;
         playerController.enabled = true;
+        goldPlayerController.enabled = true;
 
         flashbackUIPanel.Play("Fade_In");
         yield return new WaitForSeconds(clips[0].length);
 
         flashbackUI.SetActive(false);
+        OnTeleportEndsAction?.Invoke();
+        isDuringTeleport = false;
     }
+
+    public void SubscribeToTeleportEnds(Action action)
+    {
+        OnTeleportEndsAction += action;
+    }
+
+    public void DesubscribeFromTeleportEnds(Action action)
+    {
+        OnTeleportEndsAction -= action;
+    }
+
 }

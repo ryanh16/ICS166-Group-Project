@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: WaitingFor20minDia
   m_EditorClassIdentifier: 
   speakers:
-  - me
+  - Me
   - Developer
   dialogue:
-  - 0\Alright, I will just wait for 20 minutes.
+  - 0\Alright, I'll just wait the 20 minutes.
   - 1\Please wait patiently for 20 minutes.
-  - 1\After 20 minutes, the door for Transportation center will open.
+  - 1\After 20 minutes, the doors to the Transportation Center will open.

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: QuittingDia
   m_EditorClassIdentifier: 
   speakers:
-  - me
+  - Me
   dialogue:
-  - 0\This is then quit the branch
+  - 0\This is quitting the branch.

@@ -1,7 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class OptionsManager : MonoBehaviour
 {
@@ -22,9 +22,10 @@ public class OptionsManager : MonoBehaviour
     private static List<Button> ButtonList = new List<Button>();
 
     [SerializeField]
-    private static float MarginBetweenButtons = 50;
+    private static float MarginBetweenButtons = 60;
 
     private static bool CurrentlyInBranch = false;
+
 
 
     private void Start()
@@ -34,15 +35,16 @@ public class OptionsManager : MonoBehaviour
         OptionsParent = OptionsHolder.GetComponent<Transform>();
     }
 
+
     public static void CreateButton(Option option)
     {
-        Button oneButton = (Button)Instantiate<Button>(ButtonPrefab);
-        oneButton.GetComponentInChildren<Text>().text = option.GetName();
+        Button oneButton = (Button)Instantiate<Button>(ButtonPrefab, OptionsParent);
+        oneButton.GetComponentInChildren<TextMeshProUGUI>().text = option.GetName();
         // oneButton.transform.position = OptionsParent.transform.position;
-        oneButton.transform.SetParent(OptionsParent);
         oneButton.onClick.AddListener(() => { option.OnClickOnThisOption(); });
         ButtonList.Add(oneButton);
     }
+
 
     // Call this *once* before creating any new buttons or when finished on this branch
     public static void ClearAllCurrentButtons()
@@ -52,9 +54,8 @@ public class OptionsManager : MonoBehaviour
             Destroy(button.gameObject);
         }
         ButtonList.Clear();
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
     }
+
 
     // This method should be called after setting everything up. Once this method 
     // called, player will not be able to move until EndOnThisBranch() is called
@@ -64,7 +65,7 @@ public class OptionsManager : MonoBehaviour
         // probably add it here
         int NumberofButtons = ButtonList.Count;
         
-        if (NumberofButtons%2 == 0)
+        if (NumberofButtons % 2 == 0)
         {
             // Even situation
             int HalfOfNumber = NumberofButtons / 2;
@@ -75,6 +76,7 @@ public class OptionsManager : MonoBehaviour
                     Vector3 NewPosition = new Vector3(0, (HalfOfNumber - i) * MarginBetweenButtons, 0);
                     ButtonList[i].transform.localPosition = NewPosition;
                 }
+
                 else
                 {
                     Vector3 NewPosition = new Vector3(0, -(i + 1 - HalfOfNumber) * MarginBetweenButtons, 0);
@@ -82,6 +84,7 @@ public class OptionsManager : MonoBehaviour
                 }
             }
         }
+
         else
         {
             // Odd situation
@@ -93,11 +96,13 @@ public class OptionsManager : MonoBehaviour
                 {
                     ButtonList[i].transform.localPosition = Vector3.zero;
                 }
+
                 else if (i < HalfOfNumber)
                 {
                     Vector3 NewPosition = new Vector3(0, (HalfOfNumberFloat - (float) i) * MarginBetweenButtons, 0);
                     ButtonList[i].transform.localPosition = NewPosition;
                 }
+
                 else
                 {
                     Vector3 NewPosition = new Vector3(0, -(i + 1 - HalfOfNumber) * MarginBetweenButtons, 0);
@@ -107,28 +112,27 @@ public class OptionsManager : MonoBehaviour
         }
 
         CurrentlyInBranch = true;
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
         PlayerController.enabled = false;
     }
+
 
     // This method should be called after the branch is over. Once this method 
     // called, player will be able to start moving again
     public static void EndOnThisBranch()
     {
         CurrentlyInBranch = false;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
         PlayerController.enabled = true;
     }
 
-    private void LateUpdate()
+
+    public static bool IsCurrentlyInBranch()
     {
-        if (CurrentlyInBranch)
-        {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            PlayerController.enabled = false;
-        }
+        return CurrentlyInBranch;
+    }
+
+
+    public static bool HasButtonsOnScreen()
+    {
+        return ButtonList.Count != 0;
     }
 }

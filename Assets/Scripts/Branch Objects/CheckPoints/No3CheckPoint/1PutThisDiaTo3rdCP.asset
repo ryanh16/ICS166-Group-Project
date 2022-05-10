@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1PutThisDiaTo3rdCP
   m_EditorClassIdentifier: 
   speakers:
-  - me
+  - Me
   dialogue:
-  - 0\I wonder how much longer would it take, emmm.
-  - 0\It's 7:18, still early though.
+  - 0\I wonder how long it'll take.
+  - 0\It's only 7:14AM though, still early.

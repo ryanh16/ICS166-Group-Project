@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: What'sThat
   m_EditorClassIdentifier: 
   speakers:
-  - me
+  - Me
   dialogue:
-  - 0\Oh, what is that?
-  - 0\Let me check that out.
+  - 0\Oh, what's that?
+  - 0\I should check that out.

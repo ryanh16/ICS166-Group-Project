@@ -5,7 +5,7 @@ using UnityEngine;
 public class Dialogue : ScriptableObject
 {
     [SerializeField] private string[] speakers; // Stores array of speakers, their indices will be used in dialogue
-    [SerializeField] private string[] dialogue;
+    [TextArea(1, 3)] [SerializeField] private string[] dialogue;
 
 
 

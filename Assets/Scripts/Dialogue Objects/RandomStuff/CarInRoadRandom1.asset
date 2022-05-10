@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakers:
   - Driver
-  - me
+  - Me
   dialogue:
   - 0\Watch out!
   - 1\Sorry!

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: OfficeNotOpenYet
   m_EditorClassIdentifier: 
   speakers:
-  - me
+  - Me
   dialogue:
-  - 0\The office is not opened yet!
+  - 0\The office isn't open yet.

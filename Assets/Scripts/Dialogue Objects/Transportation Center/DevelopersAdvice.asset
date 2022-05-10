@@ -15,5 +15,4 @@ MonoBehaviour:
   speakers:
   - Developer
   dialogue:
-  - 0\If you feel tired of waiting.
-  - 0\Try pressing H key!
+  - 0\If you're tired of waiting, try pressing the H key!

@@ -173,7 +173,7 @@ public class DialogueManager : MonoBehaviour
         OnDialogueEndsAction += action;
     }
 
-    public static void DesubscribeFromDialogueEnds(Action action)
+    public static void UnsubscribeFromDialogueEnds(Action action)
     {
         OnDialogueEndsAction -= action;
     }

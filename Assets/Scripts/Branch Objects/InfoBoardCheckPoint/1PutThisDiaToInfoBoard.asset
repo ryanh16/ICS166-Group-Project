@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakers:
   - Info Board
-  - me
+  - Me
   dialogue:
-  - '0\The office hour for Transportation Center is:'
-  - 0\Monday through Friday, 7:45AM - 4:00PM
-  - 1\Well, it is 7:25 now, it's still 20 minutes until the office is open.
-  - 1\I can stand and wait here and purchase the bus pass and then go to classroom.
-  - 1\Or, I can go to the classroom and come back after finishing the class.
+  - '0\The hours of operation for the Transportation Center are:
+
+    Monday - Friday,
+    7:45AM - 4:00PM'
+  - 1\Well, it's 7:25AM now, there's still 20 minutes until the office opens.
+  - 1\I can stand here and wait to purchase the bus pass, then head to class...
+  - 1\Or I can go to class now and buy the pass later.

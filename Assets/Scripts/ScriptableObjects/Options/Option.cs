@@ -9,7 +9,7 @@ public class Option : ScriptableObject
 
     [SerializeField]
     [Tooltip("This is the dialogues you want to start when player clicks on this option/button.")]
-    private Dialogue DialogueToStart;
+    protected Dialogue DialogueToStart;
 
     [SerializeField]
     [Tooltip("This is the following branch that will show after the dialogue ends.")]
@@ -75,7 +75,7 @@ public class Option : ScriptableObject
         if (PlayerIsInThisBranch)
         {
             PlayerIsInThisBranch = false;
-            DialogueManager.DesubscribeFromDialogueEnds(OnDialogueEnds);
+            DialogueManager.UnsubscribeFromDialogueEnds(OnDialogueEnds);
 
             if (FollowingBranch && !MainBranch)
             {
