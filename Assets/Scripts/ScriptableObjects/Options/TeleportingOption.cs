@@ -33,7 +33,7 @@ public class TeleportingOption : Option
     public override void OnDialogueEnds()
     {
         Destination = GameObject.Find("NotQuittingTelePointInBusArea").transform;
-        DialogueManager.DesubscribeFromDialogueEnds(OnDialogueEnds);
+        DialogueManager.UnsubscribeFromDialogueEnds(OnDialogueEnds);
         FlashbackUIManager FM = GameObject.Find("FlashbackUIManager").GetComponent<FlashbackUIManager>();
         FM.Teleport(GameObject.Find("Player"), Destination);
         FM.SubscribeToTeleportEnds(OnTeleportEnds);

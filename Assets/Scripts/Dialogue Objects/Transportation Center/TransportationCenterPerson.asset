@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: TransportationCenterPerson
   m_EditorClassIdentifier: 
   speakers:
-  - me
+  - Me
   dialogue:
-  - 0\I guess she can help me with the bus pass!
+  - 0\I guess she'll be able to help me with the bus pass!

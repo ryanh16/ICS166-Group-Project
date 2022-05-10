@@ -81,6 +81,7 @@ public class Outline : MonoBehaviour {
   private bool needsUpdate;
 
 
+
   void Awake() {
 
     // Cache renderers
@@ -119,6 +120,7 @@ public class Outline : MonoBehaviour {
     }
   }
 
+
   void OnValidate() {
 
     // Update material properties
@@ -135,6 +137,7 @@ public class Outline : MonoBehaviour {
       Bake();
     }
   }
+
 
   void Update() {
     if (needsUpdate) {
@@ -186,6 +189,7 @@ public class Outline : MonoBehaviour {
       bakeValues.Add(new ListVector3() { data = smoothNormals });
     }
   }
+
 
   void LoadSmoothNormals() {
 
@@ -262,6 +266,7 @@ public class Outline : MonoBehaviour {
 
     return smoothNormals;
   }
+
 
   void CombineSubmeshes(Mesh mesh, Material[] materials) {
 

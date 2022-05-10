@@ -13,7 +13,7 @@ public class EndingManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0))
         {
             DialogueManager.OnContinueButtonClick();
         }
@@ -29,7 +29,7 @@ public class EndingManager : MonoBehaviour
 
     public void OnDialogueEnds()
     {
-        DialogueManager.DesubscribeFromDialogueEnds(OnDialogueEnds);
+        DialogueManager.UnsubscribeFromDialogueEnds(OnDialogueEnds);
         BackGround.SetActive(false);
         Player.GetComponent<Hertzole.GoldPlayer.GoldPlayerController>().enabled = true;
         this.gameObject.SetActive(false);

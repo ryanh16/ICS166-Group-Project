@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1PutThisDiaTo4thCP
   m_EditorClassIdentifier: 
   speakers:
-  - me
+  - Me
   dialogue:
-  - 0\That building over there must be the Transportation Center!
+  - 0\That building over there must be the Transportation Center.
   - 0\Almost there!

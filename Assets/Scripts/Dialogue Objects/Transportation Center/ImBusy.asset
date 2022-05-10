@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakers:
   - Transportation Center Agent
-  - me
+  - Me
   dialogue:
-  - 0\Sorry, I am a bit busy right now!
-  - 0\I think she over there can help you!
-  - 1\Alright!
+  - 0\Sorry, I'm a bit busy right now!
+  - 0\I think the next person over can help you!
+  - 1\Alright, thanks!

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1PutThisDiaTo1stCP
   m_EditorClassIdentifier: 
   speakers:
-  - me
+  - Me
   dialogue:
-  - 0\It's 7:10, still quite early.
+  - 0\It's 7:10AM, still quite early.
   - 0\Should I go and purchase a bus pass?

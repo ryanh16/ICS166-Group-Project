@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CheckPointManager : MonoBehaviour
@@ -16,6 +14,8 @@ public class CheckPointManager : MonoBehaviour
     [Tooltip("I set this to SerializeField just to make life easier!")]
     private static Branch CurrentBranch;
 
+
+
     public static void SetCurrentCheckPoint(CheckPoint CP)
     {
         if (LastCheckPoint && LastCheckPoint.GetInstanceID() != CurrentCheckPoint.GetInstanceID())
@@ -25,17 +25,20 @@ public class CheckPointManager : MonoBehaviour
         CurrentCheckPoint = CP;
     }
 
+
     public static void ReturnToLastCheckPoint()
     {
         CurrentCheckPoint = LastCheckPoint;
         FlashBackManager.Teleport(Player, LastCheckPoint.transform);
     }
 
+
     public static CheckPoint GetCurrentCheckPoint()
     {
         return CurrentCheckPoint;
     }
     
+
     // Somehow I feel keeping track of current branch can be useful
     public static void SetCurrentOngoingBranch(Branch currentBranch)
     {

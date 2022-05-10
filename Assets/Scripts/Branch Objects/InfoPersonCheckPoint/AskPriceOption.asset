@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 484c1937a0b451b47a2963aaf9252250, type: 3}
   m_Name: AskPriceOption
   m_EditorClassIdentifier: 
-  Name: How much is a 1 year bus pass?
+  Name: How much is a 1-year bus pass?
   DialogueToStart: {fileID: 11400000, guid: 3211454497a0bfe4a8250b645e8cb5e8, type: 2}
   FollowingBranch: {fileID: 0}
   MainBranch: {fileID: 11400000, guid: a5d9eb8fb0a6e974591f6c7c23bf5c31, type: 2}

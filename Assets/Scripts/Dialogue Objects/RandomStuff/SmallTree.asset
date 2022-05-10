@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: SmallTree
   m_EditorClassIdentifier: 
   speakers:
-  - me
+  - Me
   - Developer
   dialogue:
   - 0\Why is this tree so small?
-  - 0\What is wrong with the developer?
+  - 0\What's wrong with the developers?
   - 1\??????
-  - 1\I can make you fail the game right now no matter you don't believe it or not!
+  - 1\I can make you lose the game right now whether you believe it or not! Don't
+    make me do it >:(

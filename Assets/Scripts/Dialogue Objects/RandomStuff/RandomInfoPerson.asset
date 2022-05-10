@@ -15,6 +15,6 @@ MonoBehaviour:
   speakers:
   - Info Person
   dialogue:
-  - 0\(Oh~~ I am going to have two big mac with extra cheese for the lunch today!)
-  - 0\(I can't wait for it anymore!)
+  - 0\(Oh~~ I'm going to have two Big Macs with extra cheese for lunch today.)
+  - 0\(I can't wait any longer!)
   - 0\Pardon, sir, what was that?

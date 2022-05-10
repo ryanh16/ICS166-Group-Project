@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6edbe1f8d548f21498dd1d319f03a353, type: 3}
-  m_Name: InfoPerson
+  m_Name: Cabinet
   m_EditorClassIdentifier: 
   speakers:
-  - me
+  - Me
   dialogue:
-  - 0\I guess I can ask that info person about the exact price of the bus pass.
-  - 0\Oh yeah, and also where can I go and purchase it!
+  - 0\Where I keep my clothes, my books, and a little friend.

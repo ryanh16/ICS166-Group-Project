@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakers:
   - Info Person
-  - me
+  - Me
   dialogue:
-  - 1\My friend told me there is a bus pass for 1 year, how much is it?
-  - 0\So, the price for 1 year bus pass is $169, with tax.
-  - 0\And this is already a price we offer to UCI students.
+  - 1\My friend told me that there's a bus pass that's valid for 1 year, how much
+    is it?
+  - 0\So, the student price for a 1-year bus pass is going to be $169, with tax.
   - 1\Okay, thank you!

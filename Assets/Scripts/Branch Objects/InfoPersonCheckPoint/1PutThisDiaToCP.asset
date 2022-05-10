@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 1PutThisDiaToCP
   m_EditorClassIdentifier: 
   speakers:
-  - me
+  - Me
   - Info Person
   dialogue:
   - 0\Hello!
-  - 1\Hello, how can I help?
+  - 1\Hello, how may I help you?

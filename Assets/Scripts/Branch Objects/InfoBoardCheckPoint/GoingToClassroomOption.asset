@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 484c1937a0b451b47a2963aaf9252250, type: 3}
   m_Name: GoingToClassroomOption
   m_EditorClassIdentifier: 
-  Name: I'll go to classroom first.
+  Name: I'll go to class first.
   DialogueToStart: {fileID: 11400000, guid: 6b6eeba3fb8b7bd40b4cef21abbfb30d, type: 2}
   FollowingBranch: {fileID: 0}
   MainBranch: {fileID: 0}

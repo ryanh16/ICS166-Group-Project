@@ -13,9 +13,6 @@ MonoBehaviour:
   m_Name: GiantTree
   m_EditorClassIdentifier: 
   speakers:
-  - me
-  - Developer
+  - Me
   dialogue:
-  - 0\Dang! That's a giant tall tree!
-  - 0\Are developers inspired by the Erdtree in "Elden Ring"?
-  - 1\hahahahahaha
+  - 0\Erdtree, O Erdtree...

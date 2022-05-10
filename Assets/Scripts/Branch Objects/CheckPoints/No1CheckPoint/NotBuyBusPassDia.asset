@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: NotBuyBusPassDia
   m_EditorClassIdentifier: 
   speakers:
-  - me
+  - Me
   - Narrator
   dialogue:
-  - 0\Emm, I don't care.
-  - 0\I''ll just go to the class room directly.
-  - 1\You fail the game!!!
+  - 0\Uhh, I don't care.
+  - 0\I'll just go directly to class.
+  - 1\You lose the game!

@@ -75,7 +75,7 @@ public class Option : ScriptableObject
         if (PlayerIsInThisBranch)
         {
             PlayerIsInThisBranch = false;
-            DialogueManager.DesubscribeFromDialogueEnds(OnDialogueEnds);
+            DialogueManager.UnsubscribeFromDialogueEnds(OnDialogueEnds);
 
             if (FollowingBranch && !MainBranch)
             {

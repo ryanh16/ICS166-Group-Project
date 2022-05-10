@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6edbe1f8d548f21498dd1d319f03a353, type: 3}
-  m_Name: EmptyDia
+  m_Name: Timeis712
   m_EditorClassIdentifier: 
   speakers:
-  - Me
+  - Screen
   dialogue:
-  - 0\That seems like a checkpoint!
-  - 0\I wonder what would happen if I touched it?
+  - 0\The current time is 7:12AM

@@ -24,7 +24,7 @@ public class QuittingGameFailManager : MonoBehaviour
 
     public void OnDialogueEnds()
     {
-        DialogueManager.DesubscribeFromDialogueEnds(OnDialogueEnds);
+        DialogueManager.UnsubscribeFromDialogueEnds(OnDialogueEnds);
         this.enabled = false;
     }
 }
