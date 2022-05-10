@@ -8,6 +8,8 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
     private GameObject currentObject;
+    [SerializeField]
+    private FlashbackUIManager FM;
 
     // Update is called once per frame
     private void Update()
@@ -37,14 +39,14 @@ public class InputManager : MonoBehaviour
         // left mouse button click to start or advance the dialogue
         if (Input.GetMouseButtonUp(0))
         {
-            if (currentObject)
+            if (!OptionsManager.HasButtonsOnScreen() && !FM.IsDuringTeleport() && currentObject)
             {
                 Interactable curInteractable = currentObject.GetComponent<Interactable>();
                 CheckPoint curCheckPoint = currentObject.GetComponent<CheckPoint>();
 
                 if (curCheckPoint)
                 {
-                    if (curCheckPoint.CanManullyActivate())
+                    if (!OptionsManager.IsCurrentlyInBranch() && curCheckPoint.CanManullyActivate())
                     {
                         curCheckPoint.ManuallyActivateCheckPoint();
                         return;

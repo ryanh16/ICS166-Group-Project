@@ -21,15 +21,10 @@ public class EndingManager : MonoBehaviour
 
     public void Ending()
     {
-        Player.transform.position = SpawnPoint.position;
-        Player.transform.rotation = SpawnPoint.rotation;
-        BackGround.SetActive(true);
         Player.GetComponent<Hertzole.GoldPlayer.GoldPlayerController>().enabled = false;
-
-        DialogueManager.SetDialogues(Dia);
-        DialogueManager.StartDialogue();
-        DialogueManager.SubscribeToDialogueEnds(OnDialogueEnds);
-
+        FlashbackUIManager FM = GameObject.Find("FlashbackUIManager").GetComponent<FlashbackUIManager>();
+        FM.SubscribeToTeleportEnds(OnTeleportEnds);
+        FM.Teleport(Player, SpawnPoint);
     }
 
     public void OnDialogueEnds()
@@ -38,5 +33,18 @@ public class EndingManager : MonoBehaviour
         BackGround.SetActive(false);
         Player.GetComponent<Hertzole.GoldPlayer.GoldPlayerController>().enabled = true;
         this.gameObject.SetActive(false);
+    }
+
+    public void OnTeleportEnds()
+    {
+        FlashbackUIManager FM = GameObject.Find("FlashbackUIManager").GetComponent<FlashbackUIManager>();
+        FM.DesubscribeFromTeleportEnds(OnTeleportEnds);
+        Player.transform.rotation = SpawnPoint.rotation;
+        BackGround.SetActive(true);
+
+
+        DialogueManager.SetDialogues(Dia);
+        DialogueManager.StartDialogue();
+        DialogueManager.SubscribeToDialogueEnds(OnDialogueEnds);
     }
 }

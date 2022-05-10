@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6edbe1f8d548f21498dd1d319f03a353, type: 3}
-  m_Name: 1PutThisDiaTo3rdCP
+  m_Name: 1NoQuitInBusAreaDia
   m_EditorClassIdentifier: 
   speakers:
-  - me
+  - Developer
   dialogue:
-  - 0\I wonder how much longer would it take, emmm.
-  - 0\It's 7:14, still early though.
+  - 0\911?
+  - 0\Someone is trying to commit a suicide here!

@@ -52,8 +52,6 @@ public class OptionsManager : MonoBehaviour
             Destroy(button.gameObject);
         }
         ButtonList.Clear();
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // This method should be called after setting everything up. Once this method 
@@ -107,8 +105,6 @@ public class OptionsManager : MonoBehaviour
         }
 
         CurrentlyInBranch = true;
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
         PlayerController.enabled = false;
     }
 
@@ -117,18 +113,16 @@ public class OptionsManager : MonoBehaviour
     public static void EndOnThisBranch()
     {
         CurrentlyInBranch = false;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
         PlayerController.enabled = true;
     }
 
-    private void LateUpdate()
+    public static bool IsCurrentlyInBranch()
     {
-        if (CurrentlyInBranch)
-        {
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            PlayerController.enabled = false;
-        }
+        return CurrentlyInBranch;
+    }
+
+    public static bool HasButtonsOnScreen()
+    {
+        return ButtonList.Count != 0;
     }
 }

@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6edbe1f8d548f21498dd1d319f03a353, type: 3}
-  m_Name: 1PutThisDiaTo3rdCP
+  m_Name: Katana
   m_EditorClassIdentifier: 
   speakers:
   - me
   dialogue:
-  - 0\I wonder how much longer would it take, emmm.
-  - 0\It's 7:14, still early though.
+  - 0\That's a nice log right there!
+  - 0\It will be a good fit for my Katana's hilt!
+  - 0\Wait, do I have a Katana?

@@ -96,4 +96,9 @@ public class CheckPoint : MonoBehaviour
             }
         }
     }
+
+    public bool IsInteractingWithPlayer()
+    {
+        return PlayerIsHere;
+    }
 }

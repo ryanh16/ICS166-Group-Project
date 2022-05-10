@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7428abe689eeb6349831557b72b81b47, type: 3}
+  m_Name: 1NoQuitInBusAreaOption
+  m_EditorClassIdentifier: 
+  Name: No
+  DialogueToStart: {fileID: 0}
+  FollowingBranch: {fileID: 0}
+  MainBranch: {fileID: 0}
+  PlayerIsInThisBranch: 0
+  Destination: {fileID: 0}
+  DialogueAfterTeleporting: {fileID: 11400000, guid: cba77284d6bad744ab0e755f4500b0d1, type: 2}
