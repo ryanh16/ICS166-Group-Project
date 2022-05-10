@@ -22,7 +22,7 @@ public class OptionsManager : MonoBehaviour
     private static List<Button> ButtonList = new List<Button>();
 
     [SerializeField]
-    private static float MarginBetweenButtons = 50;
+    private static float MarginBetweenButtons = 60;
 
     private static bool CurrentlyInBranch = false;
 
@@ -38,10 +38,9 @@ public class OptionsManager : MonoBehaviour
 
     public static void CreateButton(Option option)
     {
-        Button oneButton = (Button)Instantiate<Button>(ButtonPrefab);
+        Button oneButton = (Button)Instantiate<Button>(ButtonPrefab, OptionsParent);
         oneButton.GetComponentInChildren<TextMeshProUGUI>().text = option.GetName();
         // oneButton.transform.position = OptionsParent.transform.position;
-        oneButton.transform.SetParent(OptionsParent);
         oneButton.onClick.AddListener(() => { option.OnClickOnThisOption(); });
         ButtonList.Add(oneButton);
     }
