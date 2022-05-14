@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6edbe1f8d548f21498dd1d319f03a353, type: 3}
+  m_Name: Tutorials
+  m_EditorClassIdentifier: 
+  speakers:
+  - Developer
+  dialogue:
+  - 0\Welcome to play this game! Let me guide you how to play it. (Press spacebar
+    key or click on LMB to continue)
+  - '0\For basic movement:'
+  - '0\For basic movement:'
+  - 0\W/A/S/D  - Move Player
+  - 0\Mouse    - Look around
+  - 0\Spacebar - Jump
+  - 0\LMB      - Interact with objects/NPCs
+  - '0\When you are having a dialogue or choice to make:'
+  - 0\Return       - Exit dialogue prematurely
+  - 0\LMB/Spacebar - Advance dialogue
+  - 0\LMB          - Select choice (When choices available)
+  - 0\And if you forget any of this, you can find this tutorials on the laptop on
+    the desk!
+  - 0\Now, enjoy!
