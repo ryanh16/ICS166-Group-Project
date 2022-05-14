@@ -327,6 +327,7 @@ public class Outline : MonoBehaviour {
 
     public void OnMouseOver()
     {
+        Debug.Log("mouse is over " + gameObject.name);
         outlineColor.a = 255;
         needsUpdate = true;
         ObjectLookingAt.SetCurrentObject(this.gameObject);
