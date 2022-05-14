@@ -18,15 +18,11 @@ MonoBehaviour:
   - 0\Welcome to play this game! Let me guide you how to play it. (Press spacebar
     key or click on LMB to continue)
   - '0\For basic movement:'
-  - '0\For basic movement:'
-  - 0\W/A/S/D  - Move Player
-  - 0\Mouse    - Look around
-  - 0\Spacebar - Jump
-  - 0\LMB      - Interact with objects/NPCs
+  - "0\\W/A/S/D  - Move Player, Mouse    - Look around, \nSpacebar - Jump, LMB     
+    - Interact with objects/NPCs"
   - '0\When you are having a dialogue or choice to make:'
-  - 0\Return       - Exit dialogue prematurely
-  - 0\LMB/Spacebar - Advance dialogue
-  - 0\LMB          - Select choice (When choices available)
+  - "0\\Return       - Exit dialogue prematurely, \nLMB/Spacebar - Advance dialogue,
+    LMB          - Select choice (When choices available)"
   - 0\And if you forget any of this, you can find this tutorials on the laptop on
     the desk!
   - 0\Now, enjoy!
