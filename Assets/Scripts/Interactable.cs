@@ -9,6 +9,27 @@ public class Interactable : MonoBehaviour
     [SerializeField] private Transform targetLocation;
 
 
+    public void OnInteractingWith()
+    {
+        if (dialogue)
+        {
+            StartDialogue();
+            DialogueManager.SubscribeToDialogueEnds(OnDialogueEnds);
+        }
+        else if (dialogue == null && targetLocation)
+        {
+            ChangeLocation();
+        }
+    }
+
+    private void OnDialogueEnds()
+    {
+        DialogueManager.UnsubscribeFromDialogueEnds(OnDialogueEnds);
+        if (targetLocation)
+        {
+            ChangeLocation();
+        }
+    }
 
     public void StartDialogue()
     {

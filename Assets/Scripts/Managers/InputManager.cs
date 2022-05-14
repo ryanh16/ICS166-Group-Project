@@ -31,6 +31,47 @@ public class InputManager : MonoBehaviour
     {
         currentObject = ObjectLookingAt.GetCurrentObject();
 
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            if (DialogueManager.IsInDialogue())
+            {
+                DialogueManager.OnContinueButtonClick();
+            }
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            if (DialogueManager.IsInDialogue())
+            {
+                DialogueManager.OnContinueButtonClick();
+            }
+            else if (currentObject && !FM.IsDuringTeleport() && !OptionsManager.HasButtonsOnScreen())
+            {
+                Interactable curInteractable = currentObject.GetComponent<Interactable>();
+                CheckPoint curCheckPoint = currentObject.GetComponent<CheckPoint>();
+
+                if (curCheckPoint)
+                {
+                    if (!DialogueManager.IsInDialogue() && !OptionsManager.IsCurrentlyInBranch() && curCheckPoint.CanManuallyActivate())
+                    {
+                        curCheckPoint.ManuallyActivateCheckPoint();
+                        return;
+                    }
+                }
+
+                if (curInteractable)
+                {
+                    if (!DialogueManager.IsInDialogue() && !OptionsManager.IsCurrentlyInBranch())
+                    {
+                        curInteractable.OnInteractingWith();
+                        return;
+                    }
+                }
+            }
+        }
+
+
+        /* == previous implementation ==
         // press the space bar to advance the dialogue
         if (Input.GetKeyUp(KeyCode.Space))
         {
@@ -114,5 +155,6 @@ public class InputManager : MonoBehaviour
             OptionsManager.ClearAllCurrentButtons();
             OptionsManager.EndOnThisBranch();
         }
+        */
     }
 }
