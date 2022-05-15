@@ -102,6 +102,7 @@ public class CheckPoint : MonoBehaviour
                 BranchInThisCP.SetUp();
             }
         }
+        Destroy(this);
     }
 
 
