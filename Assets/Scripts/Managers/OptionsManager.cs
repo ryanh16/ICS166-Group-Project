@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -26,13 +27,14 @@ public class OptionsManager : MonoBehaviour
 
     private static bool CurrentlyInBranch = false;
 
-
+    private static OptionsManager Instance;
 
     private void Start()
     {
         ButtonPrefab = ButtonPrefabInGameObject.GetComponent<Button>();
         PlayerController = Player.GetComponent<Hertzole.GoldPlayer.GoldPlayerController>();
         OptionsParent = OptionsHolder.GetComponent<Transform>();
+        Instance = this;
     }
 
 
@@ -124,7 +126,7 @@ public class OptionsManager : MonoBehaviour
     // called, player will be able to start moving again
     public static void EndOnThisBranch()
     {
-        CurrentlyInBranch = false;
+        Instance.StartCoroutine(Instance.SetToFalseAfterHalfSecond());
         PlayerController.enabled = true;
     }
 
@@ -138,5 +140,15 @@ public class OptionsManager : MonoBehaviour
     public static bool HasButtonsOnScreen()
     {
         return ButtonList.Count != 0;
+    }
+
+    // Set the CurrentlyInBranch to false after 0.5 seconds
+    // this is prevent some edge-case when player clicks on Leave
+    // option and the CheckPoint at the same time, the option will 
+    // disappear real quick and re-appear on the screen real quick.
+    IEnumerator SetToFalseAfterHalfSecond()
+    {
+        yield return new WaitForSeconds(0.5f);
+        CurrentlyInBranch = false;
     }
 }

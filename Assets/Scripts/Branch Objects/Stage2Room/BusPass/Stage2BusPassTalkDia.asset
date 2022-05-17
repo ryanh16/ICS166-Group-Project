@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6edbe1f8d548f21498dd1d319f03a353, type: 3}
+  m_Name: Stage2BusPassTalkDia
+  m_EditorClassIdentifier: 
+  speakers:
+  - Myself
+  dialogue:
+  - 0\Ahh~~ This is only $169, and it is valid for one year!
+  - 0\This is so much cheaper than taking uber or lyft every day!
+  - 0\And saves so much effort than walking to campus!

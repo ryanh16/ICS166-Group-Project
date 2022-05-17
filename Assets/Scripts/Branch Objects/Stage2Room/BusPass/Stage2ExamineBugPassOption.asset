@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63424240893826f46980569c9c90c87d, type: 3}
+  m_Name: Stage2ExamineBugPassOption
+  m_EditorClassIdentifier: 
+  Name: Examine Bus Pass
+  DialogueToStart: {fileID: 0}
+  FollowingBranch: {fileID: 0}
+  MainBranch: {fileID: 0}
+  PlayerIsInThisBranch: 0
+  ObjectToExam: {fileID: 0}
+  DialogueToTriggerAfterExamine: {fileID: 11400000, guid: e2d703cc9eb1a9b4997b1fe96f460172, type: 2}
+  EM: {fileID: 0}
+  PlayerController: {fileID: 0}

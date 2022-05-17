@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 484c1937a0b451b47a2963aaf9252250, type: 3}
+  m_Name: Stage2PhoneCheckDateOption
+  m_EditorClassIdentifier: 
+  Name: Check Date
+  DialogueToStart: {fileID: 11400000, guid: 0ea5d0cec0de0b14cb744b0c268774f9, type: 2}
+  FollowingBranch: {fileID: 0}
+  MainBranch: {fileID: 11400000, guid: 071915b9fe02bd346af4dad8f4983151, type: 2}
+  PlayerIsInThisBranch: 0
