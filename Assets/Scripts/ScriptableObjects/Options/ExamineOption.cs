@@ -71,5 +71,12 @@ public class ExamineOption : Option
         DialogueManager.UnsubscribeFromDialogueEnds(OnDialogueEnds);
         ExamineBusPass.SetActive(false);
         PostExamineBusPass.SetActive(true);
+
+        GameObject phone = GameObject.Find("Phone");
+        GameObject PostExaminePhone = phone.transform.GetChild(1).gameObject;
+
+        PostExaminePhone.transform.parent = phone.transform.parent;
+        phone.SetActive(false);
+        PostExaminePhone.SetActive(true);
     }
 }

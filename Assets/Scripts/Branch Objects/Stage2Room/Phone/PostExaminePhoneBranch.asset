@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4b2d6b18ad2a494fb87039fd44dcc1c, type: 3}
+  m_Name: PostExaminePhoneBranch
+  m_EditorClassIdentifier: 
+  OptionsInThisBranch:
+  - {fileID: 11400000, guid: aa8a681b5c2bdfe4ca1088f34440922b, type: 2}
+  - {fileID: 11400000, guid: 2492b6b1939da614cb00234a68926cb2, type: 2}
+  - {fileID: 11400000, guid: 5ca0a5a63261d8b43b541b075c0669bf, type: 2}

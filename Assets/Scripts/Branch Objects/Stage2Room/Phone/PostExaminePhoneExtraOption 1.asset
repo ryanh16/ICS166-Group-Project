@@ -9,12 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63424240893826f46980569c9c90c87d, type: 3}
-  m_Name: Stage2ExamineBugPassOption
+  m_Script: {fileID: 11500000, guid: 574fda4bbc68ee54c8f91402fc4fbcd8, type: 3}
+  m_Name: PostExaminePhoneExtraOption 1
   m_EditorClassIdentifier: 
-  Name: Examine Bus Pass
-  DialogueToStart: {fileID: 11400000, guid: 9dbbd5781180bc04f80c88bfd6b1b252, type: 2}
+  Name: Call Transportation Center
+  DialogueToStart: {fileID: 11400000, guid: 1a79a474f162ac944b0d696aac1e116f, type: 2}
   FollowingBranch: {fileID: 0}
   MainBranch: {fileID: 0}
   PlayerIsInThisBranch: 0
-  DialogueToTriggerAfterExamine: {fileID: 11400000, guid: e2d703cc9eb1a9b4997b1fe96f460172, type: 2}
+  Destination: {fileID: 0}
+  DialogueAfterTeleporting: {fileID: 0}
