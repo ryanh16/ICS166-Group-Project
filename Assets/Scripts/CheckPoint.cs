@@ -35,6 +35,7 @@ public class CheckPoint : MonoBehaviour
             PlayerIsHere = true;
             DialogueManager.StartDialogue();
         }
+
         else
         {
             BranchInThisCP.SetUp();
@@ -75,6 +76,7 @@ public class CheckPoint : MonoBehaviour
         PlayerIsHere = false;
     }
 
+
     // This method determine if the game object can be manully activated or not;
     // if yes, then it checks if  player is within the min Distance to activate or not
     public bool CanManuallyActivate()
@@ -97,11 +99,14 @@ public class CheckPoint : MonoBehaviour
         {
             PlayerIsHere = false;
             DialogueManager.UnsubscribeFromDialogueEnds(WhenDialogueEnds);
+
             if (BranchInThisCP)
             {
                 BranchInThisCP.SetUp();
             }
         }
+
+        ObjectLookingAt.RemoveCurrentObject();
         Destroy(this);
     }
 

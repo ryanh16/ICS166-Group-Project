@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakers: []
   dialogue:
-  - Well Done! You managed to get the bus pass and reached the bus in time.
-  - Time to go to class then home.
+  - Well done! You managed to get a bus pass and reached the bus in time.
+  - Time to go to class before heading home.

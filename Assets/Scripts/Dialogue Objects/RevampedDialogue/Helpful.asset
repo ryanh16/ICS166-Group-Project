@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Helpful
   m_EditorClassIdentifier: 
   speakers:
-  - Myself
+  - Me
   - Bystander
   dialogue:
-  - 0\Uh hello, do you know which line is the bus pass?
-  - 1\Bus pass? Do you mean greyhound ticket?
-  - 0\Oh no, I'm just trying to buy a pass for the city busses.
-  - 1\You got the wrong place kid. This is only for greyhounds.
+  - 0\Uh, hello. Do you know which line is for purchasing bus passes?
+  - 1\Bus passes? Do you mean GreyHound tickets?
+  - 0\Oh, no. I'm just trying to buy a pass for the city buses.
+  - 1\You got the wrong place kid. This is only for GreyHound buses.
   - '1\I think the city bus place is down the road though. '

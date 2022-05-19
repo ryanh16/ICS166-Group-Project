@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FirstBuilding
   m_EditorClassIdentifier: 
   speakers:
-  - Myself
+  - Me
   dialogue:
   - 0\I really hope that's not the line...
-  - 0\Maybe someone will know where to go.
+  - 0\Maybe someone here can tell me where to go.

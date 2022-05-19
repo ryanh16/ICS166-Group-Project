@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Rude 2
   m_EditorClassIdentifier: 
   speakers:
-  - Myself
+  - Me
   - Bystander
   dialogue:
   - 0\Hi, is this where you-
-  - 1\Sorry kid, I'm busy right now
+  - 1\Sorry kid, I'm busy right now.

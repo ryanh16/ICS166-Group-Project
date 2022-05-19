@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Ignoring
   m_EditorClassIdentifier: 
   speakers:
-  - Myself
+  - Me
   - Bystander
   dialogue:
-  - 0\Hi is this where you buy the bus pass?
+  - 0\Hi, do you know if I can buy a bus pass here?
   - 1\...
-  - 0\Uh hello?
+  - 0\Uh, hello?
   - 1\I'm busy.

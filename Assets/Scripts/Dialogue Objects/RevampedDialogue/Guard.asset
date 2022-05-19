@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Guard
   m_EditorClassIdentifier: 
   speakers:
-  - Myself
+  - Me
   - Security Guard
   dialogue:
-  - 0/Good Morning!
-  - 1/....
+  - 0\Good morning!
+  - 1\...
