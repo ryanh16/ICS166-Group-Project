@@ -6011,6 +6011,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BranchInThisCP: {fileID: 11400000, guid: 0c60150c304bb734abbdf05427c0690b, type: 2}
   DialogueInThisCP: {fileID: 11400000, guid: 543ca6c9121fff54a845d91e9f753329, type: 2}
+  DestroyOnFinish: 0
   Distance: 10
   Player: {fileID: 4064729}
 --- !u!114 &921119230
@@ -8795,6 +8796,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BranchInThisCP: {fileID: 0}
   DialogueInThisCP: {fileID: 11400000, guid: f22588d66c271e842b251a208b5ee2bd, type: 2}
+  DestroyOnFinish: 1
   Distance: 0.1
   Player: {fileID: 0}
 --- !u!65 &1492546328
@@ -11607,6 +11609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BranchInThisCP: {fileID: 0}
   DialogueInThisCP: {fileID: 11400000, guid: 5d53cc4871cdadb49bf4effc0929b0f0, type: 2}
+  DestroyOnFinish: 1
   Distance: 0.1
   Player: {fileID: 0}
 --- !u!65 &1981010588
@@ -12541,6 +12544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BranchInThisCP: {fileID: 0}
   DialogueInThisCP: {fileID: 11400000, guid: 0cb4603dd000192498e602a92c58db83, type: 2}
+  DestroyOnFinish: 1
   Distance: 0.1
   Player: {fileID: 0}
 --- !u!65 &554155799587802877

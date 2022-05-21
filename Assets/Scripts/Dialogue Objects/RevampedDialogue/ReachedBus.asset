@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6edbe1f8d548f21498dd1d319f03a353, type: 3}
   m_Name: ReachedBus
   m_EditorClassIdentifier: 
-  speakers: []
+  speakers:
+  - 
   dialogue:
-  - Well done! You managed to get a bus pass and reached the bus in time.
-  - Time to go to class before heading home.
+  - 0\Well done! You managed to get a bus pass and reached the bus in time.
+  - 0\Time to go to class before heading home.

@@ -11,6 +11,9 @@ public class CheckPoint : MonoBehaviour
     private bool PlayerIsHere = false;
 
     [SerializeField]
+    private bool DestroyOnFinish = false;
+
+    [SerializeField]
     [Tooltip("This distance determines how close should player be to this GameObject in order to start the branch.\n" +
         "If you don't want to allow maunal activation on this GameObject then don't assign this field.")]
     private float Distance = 10.0f;
@@ -107,7 +110,11 @@ public class CheckPoint : MonoBehaviour
         }
 
         ObjectLookingAt.RemoveCurrentObject();
-        Destroy(this);
+
+        if (DestroyOnFinish)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
 
