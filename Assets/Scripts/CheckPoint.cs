@@ -11,6 +11,9 @@ public class CheckPoint : MonoBehaviour
     private bool PlayerIsHere = false;
 
     [SerializeField]
+    private bool DestroyOnFinish = false;
+
+    [SerializeField]
     [Tooltip("This distance determines how close should player be to this GameObject in order to start the branch.\n" +
         "If you don't want to allow maunal activation on this GameObject then don't assign this field.")]
     private float Distance = 10.0f;
@@ -35,6 +38,7 @@ public class CheckPoint : MonoBehaviour
             PlayerIsHere = true;
             DialogueManager.StartDialogue();
         }
+
         else
         {
             BranchInThisCP.SetUp();
@@ -75,6 +79,7 @@ public class CheckPoint : MonoBehaviour
         PlayerIsHere = false;
     }
 
+
     // This method determine if the game object can be manully activated or not;
     // if yes, then it checks if  player is within the min Distance to activate or not
     public bool CanManuallyActivate()
@@ -97,10 +102,18 @@ public class CheckPoint : MonoBehaviour
         {
             PlayerIsHere = false;
             DialogueManager.UnsubscribeFromDialogueEnds(WhenDialogueEnds);
+
             if (BranchInThisCP)
             {
                 BranchInThisCP.SetUp();
             }
+        }
+
+        ObjectLookingAt.RemoveCurrentObject();
+
+        if (DestroyOnFinish)
+        {
+            Destroy(this.gameObject);
         }
     }
 

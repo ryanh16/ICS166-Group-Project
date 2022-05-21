@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6edbe1f8d548f21498dd1d319f03a353, type: 3}
+  m_Name: TerminalCashier
+  m_EditorClassIdentifier: 
+  speakers:
+  - Me
+  - Cashier
+  - 
+  dialogue:
+  - 1\How can I help you?
+  - 0\Hi, is this where I can get a student bus pass?
+  - 1\Yeah, you can buy those here.
+  - 0\Can I please get a year-long pass?
+  - 1\Sure! That will be...
+  - 1\$169.00. Do you have any questions?
+  - 0\($169.00...?)
+  - 0\No, but I'm in a bit of a hurry so is there any way I can get it now?
+  - 1\It shouldn't take too long. One moment.
+  - 2\< Bus Pass Received >
+  - 0\I should hurry...I need to catch the bus.
+  - 0\Thanks again!

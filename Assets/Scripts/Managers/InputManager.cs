@@ -84,7 +84,7 @@ public class InputManager : MonoBehaviour
                     DialogueManager.OnContinueButtonClick();
 
                     // If dialogue ended after advancing and has a target location, teleport
-                    if (!DialogueManager.IsInDialogue() && curInteractable.HasTargetLocation())
+                    if (!DialogueManager.IsInDialogue() && curInteractable != null && curInteractable.HasTargetLocation())
                     {
                         curInteractable.ChangeLocation();
                     }
@@ -116,7 +116,7 @@ public class InputManager : MonoBehaviour
                     DialogueManager.OnContinueButtonClick();
 
                     // If dialogue ended after advancing and has a target location, teleport
-                    if (!DialogueManager.IsInDialogue() && curInteractable.HasTargetLocation())
+                    if (!DialogueManager.IsInDialogue() && curInteractable != null && curInteractable.HasTargetLocation())
                     {
                         curInteractable.ChangeLocation();
                     }
