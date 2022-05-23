@@ -8,8 +8,8 @@ public class TimerTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            TimerManager.Instance.ShowTimer();
-            TimerManager.Instance.StartTimer();
+            TimerManager.Instance.ShowTimer(true);
+            TimerManager.Instance.ActivateTimer(true);
         }
     }
 }

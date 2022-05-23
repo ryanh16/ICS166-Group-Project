@@ -20,6 +20,8 @@ public class TimerManager : MonoBehaviour
     private bool timerIsActive = false;
     private int secondsToDisplay = 10;
     private bool hasDisplayedSeconds = false;
+    private float flashTimer = 0f;
+    private float flashDuration = 1f;
     #endregion
 
     #region Monobehaviour Callbacks
@@ -36,7 +38,7 @@ public class TimerManager : MonoBehaviour
         timerText = timerUI.GetComponentInChildren<Text>();
 
         ResetTimer();
-        HideTimer();
+        ShowTimer(false);
     }
     private void Update()
     {
@@ -48,10 +50,12 @@ public class TimerManager : MonoBehaviour
                 currTime = 0;
             }
             displayTimer(currTime);
-        }
-       
+        } 
+        if (secondsToDisplay == 0)
+        {
+            FlashTimer();
+        }   
     }
-
     private void OnDestroy()
     {
         Instance = null;
@@ -59,13 +63,9 @@ public class TimerManager : MonoBehaviour
     #endregion
 
     #region Helper Functions
-    public void StartTimer()
+    public void ActivateTimer(bool enabled)
     {
-        timerIsActive = true;
-    }
-    public void StopTimer()
-    {
-        timerIsActive = false;
+        timerIsActive = enabled;
     }
     public void ResetTimer()
     {
@@ -87,7 +87,7 @@ public class TimerManager : MonoBehaviour
         {
             hasDisplayedSeconds = false;
         }
-        if (secondsToDisplay == 60)
+        if (secondsToDisplay == SECONDS_IN_MIN)
         {
             ResetTimer();
             minutes = 8;
@@ -95,13 +95,26 @@ public class TimerManager : MonoBehaviour
         }
         timerText.text = string.Format(stringFormat, minutes, secondsToDisplay);
     }
-    public void HideTimer()
+    public void ShowTimer(bool enabled)
     {
-        timerUI.SetActive(false);
+        timerUI.SetActive(enabled);
     }
-    public void ShowTimer()
+    private void FlashTimer()
     {
-        timerUI.SetActive(true);
+        if (flashTimer <= 0)
+        {
+            flashTimer = flashDuration;
+        }
+        else if (flashTimer >= flashDuration / 2)
+        {
+            flashTimer -= Time.deltaTime;
+            ShowTimer(false);
+        }
+        else
+        {
+            flashTimer -= Time.deltaTime;
+            ShowTimer(true);
+        }
     }
     #endregion
 }
