@@ -18,6 +18,11 @@ public class Interactable : MonoBehaviour
         }
         else if (dialogue == null && targetLocation)
         {
+            SubscriberToEventManager STEM = GetComponent<SubscriberToEventManager>();
+            if (STEM && STEM.CanAdvanceEventOrNot())
+            {
+                EventManager.Instance.AdvanceToNextEvent();
+            }
             ChangeLocation();
         }
     }
@@ -25,6 +30,13 @@ public class Interactable : MonoBehaviour
     private void OnDialogueEnds()
     {
         DialogueManager.UnsubscribeFromDialogueEnds(OnDialogueEnds);
+
+        SubscriberToEventManager STEM = GetComponent<SubscriberToEventManager>();
+        if (STEM && STEM.CanAdvanceEventOrNot())
+        {
+            EventManager.Instance.AdvanceToNextEvent();
+        }
+
         if (targetLocation)
         {
             ChangeLocation();

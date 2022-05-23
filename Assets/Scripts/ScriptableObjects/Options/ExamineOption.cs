@@ -11,19 +11,12 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewOption", menuName = "Options/ExamineOption")]
 public class ExamineOption : Option
 {
-    // For some reason, I cannot manually assign GameObject to
-    // ScritpableObject instance in the inspector, so I will
-    // have to find them using Find() method, even though I
-    // do not want to do this
-    private GameObject ObjectToExam;
-
     [SerializeField]
     private Dialogue DialogueToTriggerAfterExamine;
 
     private ExamineManager EM;
     private GameObject Player;
 
-    private GameObject PostExamineBusPass;
     private GameObject ExamineBusPass;
 
     public override void OnClickOnThisOption()
@@ -31,11 +24,7 @@ public class ExamineOption : Option
         OptionsManager.ClearAllCurrentButtons();
         OptionsManager.EndOnThisBranch();
 
-        ObjectToExam = GameObject.Find("ExamineBusPass");
-        PostExamineBusPass = ObjectToExam.transform.GetChild(2).gameObject;
-        PostExamineBusPass.transform.parent = ObjectToExam.transform.parent;
-        ExamineBusPass = ObjectToExam.transform.GetChild(1).gameObject;
-        ExamineBusPass.transform.parent = ObjectToExam.transform.parent;
+        ExamineBusPass = GameObject.Find("ExamineBusPass");
 
         Player = GameObject.Find("Player");
         Player.GetComponent<Hertzole.GoldPlayer.GoldPlayerController>().enabled = false;
@@ -51,7 +40,6 @@ public class ExamineOption : Option
         EM = GameObject.Find("ExamineManager").GetComponent<ExamineManager>();
         EM.enabled = true;
 
-        ObjectToExam.SetActive(false);
         ExamineBusPass.SetActive(true);
 
         EM.StartExamining(ExamineBusPass);
@@ -64,19 +52,14 @@ public class ExamineOption : Option
         DialogueManager.SetDialogues(DialogueToTriggerAfterExamine);
         DialogueManager.StartDialogue();
         DialogueManager.SubscribeToDialogueEnds(OnDialogueEnds);
+
+        // advance the event chain
+        EventManager.Instance.AdvanceToNextEvent();
     }
 
     public override void OnDialogueEnds()
     {
         DialogueManager.UnsubscribeFromDialogueEnds(OnDialogueEnds);
         ExamineBusPass.SetActive(false);
-        PostExamineBusPass.SetActive(true);
-
-        GameObject phone = GameObject.Find("Phone");
-        GameObject PostExaminePhone = phone.transform.GetChild(1).gameObject;
-
-        PostExaminePhone.transform.parent = phone.transform.parent;
-        phone.SetActive(false);
-        PostExaminePhone.SetActive(true);
     }
 }

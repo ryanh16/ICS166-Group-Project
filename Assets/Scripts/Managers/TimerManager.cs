@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class TimerManager : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class TimerManager : MonoBehaviour
     private bool hasDisplayedSeconds = false;
     private float flashTimer = 0f;
     private float flashDuration = 1f;
+    private Action On745;
     #endregion
 
     #region Monobehaviour Callbacks
@@ -94,6 +96,11 @@ public class TimerManager : MonoBehaviour
             secondsToDisplay = 0;
         }
         timerText.text = string.Format(stringFormat, minutes, secondsToDisplay);
+
+        if (timerText.text == "07:12am")
+        {
+            On745?.Invoke();
+        }
     }
     public void ShowTimer(bool enabled)
     {
@@ -115,6 +122,21 @@ public class TimerManager : MonoBehaviour
             flashTimer -= Time.deltaTime;
             ShowTimer(true);
         }
+    }
+
+    public void SubscribeTo745(Action action)
+    {
+        On745 += action;
+    }
+
+    public void UnsubscribeFrom745(Action action)
+    {
+        On745 -= action;
+    }
+
+    public string GetTimeInText()
+    {
+        return timerText.text;
     }
     #endregion
 }
