@@ -84,5 +84,9 @@ public class TimerManager : MonoBehaviour
         Debug.Log("Hiding Timer UI.");
         timerUI.SetActive(false);
     }
+    public void ShowTimer()
+    {
+        timerUI.SetActive(true);
+    }
     #endregion
 }
