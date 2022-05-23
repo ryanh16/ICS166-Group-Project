@@ -10,13 +10,16 @@ public class TimerManager : MonoBehaviour
     #endregion
     
     #region Private Fields
-    [SerializeField] private int numOfMinutes = 1;
+    //[SerializeField] private int numOfMinutes = 1;
     [SerializeField] private GameObject timerUI;
+    [SerializeField] private int secondsToMinuteConversion = 10;
     private Text timerText;
     private float currTime;
     private const int SECONDS_IN_MIN = 60;
-    private string stringFormat = "{0:00}:{1:00}"; //This should format the Timer to 00:00.
+    private string stringFormat = "{0:00}:{1:00}am"; //This should format the Timer to 00:00.
     private bool timerIsActive = false;
+    private int secondsToDisplay = 10;
+    private bool hasDisplayedSeconds = false;
     #endregion
 
     #region Monobehaviour Callbacks
@@ -39,7 +42,7 @@ public class TimerManager : MonoBehaviour
     {
         if (timerIsActive)
         {
-            currTime -= Time.deltaTime;
+            currTime += Time.deltaTime;
             if (currTime <= 0)
             {
                 currTime = 0;
@@ -58,30 +61,42 @@ public class TimerManager : MonoBehaviour
     #region Helper Functions
     public void StartTimer()
     {
-        Debug.Log("Starting the Timer");
         timerIsActive = true;
     }
     public void StopTimer()
     {
-        Debug.Log("Stopping the Timer.");
         timerIsActive = false;
     }
     public void ResetTimer()
     {
-        Debug.Log("Resetting Timer");
-        currTime = numOfMinutes * SECONDS_IN_MIN;
+        currTime = SECONDS_IN_MIN * 7;
         timerIsActive = false;
     }
     public void displayTimer(float time)
     {
-        float minutes = Mathf.FloorToInt(time / SECONDS_IN_MIN);
-        float seconds = Mathf.FloorToInt(time % SECONDS_IN_MIN);
-
-        timerText.text = string.Format(stringFormat, minutes, seconds); //Format the timer to 00:00.
+        //float minutes = Mathf.RoundToInt(time / SECONDS_IN_MIN);
+        //Debug.Log(minutes);
+        int minutes = 7;
+        float seconds = Mathf.RoundToInt(time % SECONDS_IN_MIN);
+        if (seconds % secondsToMinuteConversion == 0 && seconds != 0 && !hasDisplayedSeconds)
+        {
+            secondsToDisplay += 1;
+            hasDisplayedSeconds = true;
+        }
+        if (seconds % secondsToMinuteConversion != 0 && hasDisplayedSeconds)
+        {
+            hasDisplayedSeconds = false;
+        }
+        if (secondsToDisplay == 60)
+        {
+            ResetTimer();
+            minutes = 8;
+            secondsToDisplay = 0;
+        }
+        timerText.text = string.Format(stringFormat, minutes, secondsToDisplay);
     }
     public void HideTimer()
     {
-        Debug.Log("Hiding Timer UI.");
         timerUI.SetActive(false);
     }
     public void ShowTimer()
