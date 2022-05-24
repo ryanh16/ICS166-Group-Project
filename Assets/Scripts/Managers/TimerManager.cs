@@ -19,8 +19,7 @@ public class TimerManager : MonoBehaviour
     private const int SECONDS_IN_MIN = 60;
     private string stringFormat = "{0:00}:{1:00}am"; //This should format the Timer to 00:00.
     private bool timerIsActive = false;
-    private int minutesToDisplay;
-    private int secondsToDisplay;
+    private int secondsToDisplay = 10;
     private bool hasDisplayedSeconds = false;
     private float flashTimer = 0f;
     private float flashDuration = 1f;
@@ -40,21 +39,21 @@ public class TimerManager : MonoBehaviour
         }
         timerText = timerUI.GetComponentInChildren<Text>();
 
-        ResetTimer(); //To start, Timer should be at 7:10am.
-        ShowTimer(false); //And the UI shouldn't be displayed yet.
+        ResetTimer();
+        ShowTimer(false);
     }
     private void Update()
     {
-        if (timerIsActive)  //If the Timer is currently active,
+        if (timerIsActive)
         {
-            currTime += Time.deltaTime; //Increment by time since
+            currTime += Time.deltaTime;
             if (currTime <= 0)
             {
                 currTime = 0;
             }
-            displayTimer(currTime); //and display it. currTime should hold the Time
+            displayTimer(currTime);
         } 
-        if (minutesToDisplay == 8 && secondsToDisplay == 0)
+        if (secondsToDisplay == 0)
         {
             FlashTimer();
         }   
@@ -66,22 +65,20 @@ public class TimerManager : MonoBehaviour
     #endregion
 
     #region Helper Functions
-    public void ActivateTimer(bool enabled) //Setting the timer to active or not active.
+    public void ActivateTimer(bool enabled)
     {
         timerIsActive = enabled;
     }
-    public void ResetTimer() //Resets the Timer text to display 7 minutes and 10 minutes, but deactivates the Timer.
-    {                        //When using ResetTimer, do not forget to ActivateTimer(true) to get it running again.
+    public void ResetTimer()
+    {
         currTime = SECONDS_IN_MIN * 7;
-        minutesToDisplay = 7;
-        secondsToDisplay = 10;
-        timerText.text = string.Format(stringFormat, minutesToDisplay, secondsToDisplay);
         timerIsActive = false;
     }
     public void displayTimer(float time)
     {
         //float minutes = Mathf.RoundToInt(time / SECONDS_IN_MIN);
         //Debug.Log(minutes);
+        int minutes = 7;
         float seconds = Mathf.RoundToInt(time % SECONDS_IN_MIN);
         if (seconds % secondsToMinuteConversion == 0 && seconds != 0 && !hasDisplayedSeconds)
         {
@@ -94,22 +91,22 @@ public class TimerManager : MonoBehaviour
         }
         if (secondsToDisplay == SECONDS_IN_MIN)
         {
-            //ResetTimer();
-            minutesToDisplay += 1;
+            ResetTimer();
+            minutes = 8;
             secondsToDisplay = 0;
         }
-        timerText.text = string.Format(stringFormat, minutesToDisplay, secondsToDisplay);
+        timerText.text = string.Format(stringFormat, minutes, secondsToDisplay);
 
         if (timerText.text == "07:12am")
         {
             On745?.Invoke();
         }
     }
-    public void ShowTimer(bool enabled) //This is setting the UI to be shown or not.
+    public void ShowTimer(bool enabled)
     {
         timerUI.SetActive(enabled);
     }
-    private void FlashTimer() //This is to Flash the Timer, right now it only flashes when Timer is 8:00am.
+    private void FlashTimer()
     {
         if (flashTimer <= 0)
         {
@@ -125,13 +122,6 @@ public class TimerManager : MonoBehaviour
             flashTimer -= Time.deltaTime;
             ShowTimer(true);
         }
-    }
-
-    public void SetTimer(int minutes, int seconds) //Sets the Timer to specified time in minutes and seconds.
-    {
-        minutesToDisplay = minutes;
-        secondsToDisplay = seconds;
-        timerText.text = string.Format(stringFormat, minutesToDisplay, secondsToDisplay);
     }
 
     public void SubscribeTo745(Action action)
