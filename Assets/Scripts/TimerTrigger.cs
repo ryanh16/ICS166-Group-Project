@@ -14,6 +14,9 @@ public class TimerTrigger : MonoBehaviour
             TimerManager.Instance.ShowTimer(true);
             TimerManager.Instance.ActivateTimer(true);
 
+            door.SetActive(true);
+            door.GetComponent<Outline>().SetColorToInvisible();
+
             door.GetComponent<DoorManager>().SubscribeTo745Time();
         }
     }

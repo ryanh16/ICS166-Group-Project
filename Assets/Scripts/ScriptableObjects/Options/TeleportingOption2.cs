@@ -26,25 +26,27 @@ public class TeleportingOption2 : Option
         else
         {
             Destination = GameObject.Find("BusSpawn").transform;
-            FlashbackUIManager FM = GameObject.Find("FlashbackUIManager").GetComponent<FlashbackUIManager>();
-            FM.Teleport(GameObject.Find("Player"), Destination);
-            FM.SubscribeToTeleportEnds(OnTeleportEnds);
+            FlashbackUIManager.Instance.Teleport(GameObject.Find("Player"), Destination);
+            FlashbackUIManager.Instance.SubscribeToTeleportEnds(OnTeleportEnds);
         }
     }
 
     public override void OnDialogueEnds()
     {
-        Destination = GameObject.Find("NotQuittingTelePointInBusArea").transform;
+        Destination = GameObject.Find("BusSpawn").transform;
         DialogueManager.UnsubscribeFromDialogueEnds(OnDialogueEnds);
-        FlashbackUIManager FM = GameObject.Find("FlashbackUIManager").GetComponent<FlashbackUIManager>();
-        FM.Teleport(GameObject.Find("Player"), Destination);
-        FM.SubscribeToTeleportEnds(OnTeleportEnds);
+        FlashbackUIManager.Instance.Teleport(GameObject.Find("Player"), Destination);
+        FlashbackUIManager.Instance.SubscribeToTeleportEnds(OnTeleportEnds);
+
+        OptionsManager.ClearAllCurrentButtons();
+        OptionsManager.EndOnThisBranch();
+
+        EventManager.Instance.AdvanceToNextEvent();
     }
 
     public void OnTeleportEnds()
     {
-        FlashbackUIManager FM = GameObject.Find("FlashbackUIManager").GetComponent<FlashbackUIManager>();
-        FM.DesubscribeFromTeleportEnds(OnTeleportEnds);
+        FlashbackUIManager.Instance.DesubscribeFromTeleportEnds(OnTeleportEnds);
         if (DialogueAfterTeleporting)
         {
             DialogueManager.SetDialogues(DialogueAfterTeleporting);

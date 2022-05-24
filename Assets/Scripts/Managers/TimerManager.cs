@@ -104,6 +104,14 @@ public class TimerManager : MonoBehaviour
         {
             On745?.Invoke();
         }
+
+        if (timerText.text == "09:50am")
+        {
+            if (!EventManager.Instance.HasReachedTheEnd())
+            {
+                EventManager.Instance.AdvanceToNextEvent();
+            }
+        }
     }
     public void ShowTimer(bool enabled) //This is setting the UI to be shown or not.
     {

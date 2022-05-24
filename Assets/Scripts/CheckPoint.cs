@@ -16,7 +16,7 @@ public class CheckPoint : MonoBehaviour
     [SerializeField]
     [Tooltip("This distance determines how close should player be to this GameObject in order to start the branch.\n" +
         "If you don't want to allow maunal activation on this GameObject then don't assign this field.")]
-    private float Distance = 10.0f;
+    private float Distance = 5.0f;
 
     [SerializeField]
     [Tooltip("If you don't want to allow manual activation on this GameObject then don't assign this field.")]
@@ -57,6 +57,7 @@ public class CheckPoint : MonoBehaviour
 
         CheckPointManager.SetCurrentCheckPoint(this.gameObject.GetComponent<CheckPoint>());
         ObjectLookingAt.SetCurrentObject(this.gameObject);
+
         if (DialogueInThisCP)
         {
             // if there is any dialogue, play the dialogue first
@@ -107,6 +108,13 @@ public class CheckPoint : MonoBehaviour
             {
                 BranchInThisCP.SetUp();
             }
+        }
+
+        SubscriberToEventManager STEM = GetComponent<SubscriberToEventManager>();
+
+        if (STEM && STEM.CanAdvanceEventOrNot())
+        {
+            EventManager.Instance.AdvanceToNextEvent();
         }
 
         ObjectLookingAt.RemoveCurrentObject();

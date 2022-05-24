@@ -44,7 +44,8 @@ public class Finished11Manager : MonoBehaviour
         FlashbackUIManager.Instance.Teleport(GameObject.Find("Player"), TeleportDestination);
         FlashbackUIManager.Instance.SubscribeToTeleportEnds(OnTeleportEnds);
         // dont if this is the right way to do so
-        TimerManager.Instance.enabled = false;
+        TimerManager.Instance.ShowTimer(false);
+        TimerManager.Instance.ResetTimer();
     }
 
     private void OnTeleportEnds()

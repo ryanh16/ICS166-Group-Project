@@ -22,6 +22,5 @@ public class EndingOption : Option
 
         EndingManager EM = GameObject.Find("EndingManager").GetComponent<EndingManager>();
         EM.enabled = true;
-        EM.Ending();
     }
 }

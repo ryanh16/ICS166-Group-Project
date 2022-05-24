@@ -366,4 +366,10 @@ public class Outline : MonoBehaviour {
             }
         }*/
     }
+
+    public void SetColorToInvisible()
+    {
+        outlineColor.a = 0;
+        needsUpdate = true;
+    }
 }

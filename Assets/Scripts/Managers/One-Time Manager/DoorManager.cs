@@ -7,7 +7,7 @@ public class DoorManager : MonoBehaviour
     public void On745Time()
     {
         TimerManager.Instance.UnsubscribeFrom745(On745Time);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     public void SubscribeTo745Time()

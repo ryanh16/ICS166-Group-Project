@@ -32,7 +32,9 @@ public class Interactable : MonoBehaviour
         DialogueManager.UnsubscribeFromDialogueEnds(OnDialogueEnds);
 
         SubscriberToEventManager STEM = GetComponent<SubscriberToEventManager>();
-        if (STEM && STEM.CanAdvanceEventOrNot())
+        CheckPoint CP = GetComponent<CheckPoint>();
+
+        if (!CP && STEM && STEM.CanAdvanceEventOrNot())
         {
             EventManager.Instance.AdvanceToNextEvent();
         }

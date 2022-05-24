@@ -9,6 +9,9 @@ public sealed class EventTypes
         AfterPurchaseBusPass,
         AfterExamineBusPass,
         AfterCallTC,
-        AfterReturnBusPass
+        AfterConsult,
+        AfterClass,
+        AfterReturnBusPass,
+        Ending
     }
 }

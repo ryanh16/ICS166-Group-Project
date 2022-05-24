@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4df7a7691f72fdd409327ab62ccd63ff, type: 3}
+  m_Name: WatchingCredit
+  m_EditorClassIdentifier: 
+  Name: Yes
+  DialogueToStart: {fileID: 11400000, guid: dfa18aea09a64424381bc1f4a9b394fe, type: 2}
+  FollowingBranch: {fileID: 0}
+  MainBranch: {fileID: 0}
+  PlayerIsInThisBranch: 0
