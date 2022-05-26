@@ -25,6 +25,9 @@ public class TimerManager : MonoBehaviour
     private float flashTimer = 0f;
     private float flashDuration = 1f;
     private Action On745;
+    private Action On735;
+    private Action On755;
+    private Action On8am;
     #endregion
 
     #region Monobehaviour Callbacks
@@ -100,7 +103,7 @@ public class TimerManager : MonoBehaviour
         }
         timerText.text = string.Format(stringFormat, minutesToDisplay, secondsToDisplay);
 
-        if (timerText.text == "07:12am")
+        if (timerText.text == "07:45am")
         {
             On745?.Invoke();
         }

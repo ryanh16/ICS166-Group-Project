@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PostAfter8
   m_EditorClassIdentifier: 
   speakers:
-  - Me
+  - Myself
   dialogue:
-  - 0\Finally got home.
-  - 0\Oh, it was lucky the Professor didn't punish student who was late today ~
+  - 0\Finally home
+  - 0\Phew, barely made it. Now lets hope my test scores are as lucky..

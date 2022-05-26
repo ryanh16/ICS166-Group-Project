@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: AlreadyGotWhatINeed
   m_EditorClassIdentifier: 
   speakers:
-  - Me
+  - Myself
   dialogue:
-  - 0\I already got what I need.
-  - 0\Now I really need to attend the lecture now.
-  - 0\It's at 8AM!
+  - 0\I need to go catch the bus!
+  - 0\I really hope I don't miss the midterm

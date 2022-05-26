@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Rude
   m_EditorClassIdentifier: 
   speakers:
-  - Me
+  - Myself
   - Bystander
   dialogue:
   - 0\Hello, do-

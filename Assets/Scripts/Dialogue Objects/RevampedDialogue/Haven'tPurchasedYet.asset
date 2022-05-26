@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Haven'tPurchasedYet
   m_EditorClassIdentifier: 
   speakers:
-  - Me
+  - Myself
   dialogue:
-  - 0\Well, I need to purchase the bus pass first so I don't need to come back later.
+  - 0\Well, I need to purchase the bus pass. This trip can't be for nothing.

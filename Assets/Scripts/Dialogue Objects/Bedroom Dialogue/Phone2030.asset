@@ -13,6 +13,12 @@ MonoBehaviour:
   m_Name: Phone2030
   m_EditorClassIdentifier: 
   speakers:
-  - Phone
+  - Home Screen
+  - Banking App
+  - Weather
   dialogue:
-  - '0\Today is 5/23/2030, Weather: blah~blah~, '
+  - 0\June 6th 2025
+  - '1\Remaining Bank Balance : $1.37'
+  - '2\Cloudy with a chance of Rain
+
+    67 Degrees'

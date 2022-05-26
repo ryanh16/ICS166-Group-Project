@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: ReachedBus
   m_EditorClassIdentifier: 
   speakers:
-  - 
+  - Myself
   dialogue:
-  - 0\Well done! You managed to get a bus pass and reached the bus in time.
-  - 0\Time to go to class before heading home.
+  - 0\Yes! Caught the bus!

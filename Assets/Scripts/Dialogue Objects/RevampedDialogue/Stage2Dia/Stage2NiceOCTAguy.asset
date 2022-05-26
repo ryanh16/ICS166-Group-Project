@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Stage2NiceOCTAguy
   m_EditorClassIdentifier: 
   speakers:
-  - Me
+  - Myself
   dialogue:
-  - 0\That OCTA guy is nice!
+  - 0\Phew, thank goodness the surpervisor helped out.

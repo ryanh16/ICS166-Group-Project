@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Stage2AfterClassOfBus
   m_EditorClassIdentifier: 
   speakers:
-  - Me
+  - Myself
   dialogue:
-  - 0\That lecture was boring, but I like that professor.
-  - 0\Let me see ...
-  - 0\It's 9:34 now, the County's Transportation Center agent should be here now.
+  - 0\Finally I'm back. I just need to get this off my shoulders already.
+  - 0\It's 9:34 now, the surpervisor should be in now... Hopefully.

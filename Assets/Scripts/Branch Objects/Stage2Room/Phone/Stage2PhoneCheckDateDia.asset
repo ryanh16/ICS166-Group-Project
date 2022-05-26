@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Stage2PhoneCheckDateDia
   m_EditorClassIdentifier: 
   speakers:
-  - Phone
+  - Home Screen
   dialogue:
-  - '0\Today: Tuesday? April 2nd. Weather: ~~~ '
+  - '0\May 22nd, 2022
+
+    5:00 PM'

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Before8
   m_EditorClassIdentifier: 
   speakers:
-  - Me
+  - Myself
   dialogue:
-  - 0\Alright, still got time to catch the class!
+  - 0\Phew, Got enough time to get a bit of studying done before the midterm.

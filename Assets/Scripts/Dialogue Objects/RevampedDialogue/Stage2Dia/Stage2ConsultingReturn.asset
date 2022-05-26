@@ -13,12 +13,15 @@ MonoBehaviour:
   m_Name: Stage2ConsultingReturn
   m_EditorClassIdentifier: 
   speakers:
-  - Me
+  - Myself
   - Cashier
   dialogue:
-  - '0\Hello, I want to return this bus pass. Reason: ......'
-  - 1\Hello, ...... we don't have the authority to return the bus pass, but you can
-    come back later when the office hour for the county's TA's people is open.
-  - 0\When is that?
-  - 1\9:30
-  - 0\Alright, I guess I will have to come back after my class.
+  - 0\Hello can I return this bus pass? I got it the other day but I was under the
+    understanding it was a year not a month.
+  - 1\So I actually can't refund a bus pass that was purchased for that long a quantity.
+    Your best bet would be to talk to a supervisor about it.
+  - 0\Oh ok. Can I talk to them?
+  - 1\Unfortanetly they are not in yet. They usually come in around 9:30 if you want
+    to wait for them.
+  - 0\Uh..I'll just come back later. Thanks anyways...
+  - 0\--Sigh-- I guess I'll just come back after my class. This is not worth it..

@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: PostBefore8
   m_EditorClassIdentifier: 
   speakers:
-  - Me
+  - Myself
   dialogue:
-  - 0\Finally got home.
-  - 0\Everything went well so far.
-  - 0\Thumbs up for myself!
+  - 0\Finally home
+  - 0\Im surprised I made it..I really thought I was going to be late.

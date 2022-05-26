@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ignoring
   m_EditorClassIdentifier: 
   speakers:
-  - Me
+  - Myself
   - Bystander
   dialogue:
   - 0\Hi, do you know if I can buy a bus pass here?

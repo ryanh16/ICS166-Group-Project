@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 2QuitGameInRoomDia
   m_EditorClassIdentifier: 
   speakers:
-  - Developer
+  - Myself
   dialogue:
-  - 0\You want to quit the game?
+  - 0\Wait..I feel like I'm missing something.

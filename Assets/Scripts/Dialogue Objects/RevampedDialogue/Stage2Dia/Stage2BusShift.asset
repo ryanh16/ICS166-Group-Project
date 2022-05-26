@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Stage2BusShift
   m_EditorClassIdentifier: 
   speakers:
-  - Me
+  - Myself
+  - Bus Driver
   dialogue:
-  - 0\The bus driver is taking a break now.
-  - 0\He will open the door for entry around 9:50.
+  - 0\The bus isn't ready to leave yet. I guess I'm doing some more waiting...
+  - 1\Sorry Kid. Break is over at 9:55!
+  - 0\It's fine!

@@ -13,10 +13,8 @@ MonoBehaviour:
   m_Name: Stage2IRefundedit
   m_EditorClassIdentifier: 
   speakers:
-  - Me
+  - Myself
   - Cashier
   dialogue:
-  - 0\So the County's Tranportation Center agent help me refund my bus pass, but
-    with a daily rate charge.
-  - 1\Oh~ Cool, that's good to hear. Have a good one!
-  - 0\You too!
+  - 0\Thank you, have a good day!
+  - 1\You too! Come again!

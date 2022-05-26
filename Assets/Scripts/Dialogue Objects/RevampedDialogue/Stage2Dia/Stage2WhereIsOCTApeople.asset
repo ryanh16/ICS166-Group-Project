@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Stage2WhereIsOCTApeople
   m_EditorClassIdentifier: 
   speakers:
-  - Me
+  - Myself
   - Cashier
   dialogue:
-  - 0\Hi, I'm back, and may I ask where it the county's Transportation Authority's
-    people?
-  - 1\The one there in green!
-  - 0\Alright thank you!
+  - 0\Hello, I was here earlier asking about returning a bus pass. Is the supervisor
+    in?
+  - 1\Yes, he is by the station. Dressed in all green.
+  - 0\Alright, thank you!

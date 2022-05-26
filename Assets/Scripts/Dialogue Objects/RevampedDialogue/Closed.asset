@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Closed
   m_EditorClassIdentifier: 
   speakers:
-  - Me
+  - Myself
   dialogue:
   - 0\Wait...it's closed.

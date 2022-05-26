@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: SecondBuildingAfterPurchase
   m_EditorClassIdentifier: 
   speakers:
-  - Me
+  - Myself
   dialogue:
-  - 0\Alright, I guess I can take that bus to catch the 8AM class starting in couple
-    of minutes.
-  - 0\(Yawning ~~) oh, I really need to take another nap after that class is over.
+  - 0\Alright, time to go catch the bus now.

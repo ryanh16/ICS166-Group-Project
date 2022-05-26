@@ -15,6 +15,10 @@ MonoBehaviour:
   speakers:
   - Myself
   - Transportation Center
+  - 
   dialogue:
-  - 0\Hello?
-  - 0\Why the fuck is it valid from .... (this is placeholder)
+  - 2\---Dialing---
+  - 1\Hello, this is the automated system for Irvine Transportation Center. Unfortanetly
+    you are calling outside of regular business hours.
+  - 1\Please call again.
+  - '0\Damnit. I have to go again. '

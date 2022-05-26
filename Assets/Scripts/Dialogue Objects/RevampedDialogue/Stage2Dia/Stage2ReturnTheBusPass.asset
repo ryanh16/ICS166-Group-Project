@@ -14,10 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakers:
   - Me
-  - OCTA People
+  - Surpervisor
   dialogue:
-  - 0\Hello, I want to return this bus pass ... ( i just purchased it two days ago,
-    but i can only use it for 3 months, so ....)
-  - 1\OK, but it will be charged at a daily rate.
-  - 0\OK
-  - 1\alright then, it is processed.
+  - 0\Hello. I am here to return this bus pass. I bought it under the assumption
+    it was for a year but it expires in less than a month. Is there anything you
+    can do?
+  - 1\Hm..
+  - '1\I''ll tell you what I can do. I''ll process the refund but you will have to
+    be charged for the rate that you had it. '
+  - 1\So in your case, it would be the day.
+  - 0\Alright thats fine. Totally fine! Thank you so much!
+  - 1\Alright, your funds should be sent back to your method of purchase within a
+    few days.

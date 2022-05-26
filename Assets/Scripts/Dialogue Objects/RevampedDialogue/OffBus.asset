@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: OffBus
   m_EditorClassIdentifier: 
   speakers:
-  - Me
+  - Myself
   dialogue:
-  - 0\Okay...it's 7:10. I have...until 8.
-  - 0\I need to hurry, I can't miss this test.
+  - 0\So it's currently..7:10 am. My midterm is at 8:15.
+  - 0\I need to hurry. I really can't fail.
