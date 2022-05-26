@@ -13,15 +13,16 @@ MonoBehaviour:
   m_Name: Stage2ConsultingReturn
   m_EditorClassIdentifier: 
   speakers:
-  - Myself
+  - Me
   - Cashier
   dialogue:
-  - 0\Hello can I return this bus pass? I got it the other day but I was under the
-    understanding it was a year not a month.
-  - 1\So I actually can't refund a bus pass that was purchased for that long a quantity.
-    Your best bet would be to talk to a supervisor about it.
-  - 0\Oh ok. Can I talk to them?
-  - 1\Unfortanetly they are not in yet. They usually come in around 9:30 if you want
-    to wait for them.
-  - 0\Uh..I'll just come back later. Thanks anyways...
-  - 0\--Sigh-- I guess I'll just come back after my class. This is not worth it..
+  - 0\I'm sorry, can I return this bus pass? I got it the other day but I thought
+    it was going to last for a year, not an academic year.
+  - 1\Actually, I'm not allowed to refund bus passes that last for that long. Your
+    best bet would be to talk to a supervisor about it.
+  - 0\Oh...okay. Is there a supervisor around?
+  - 1\Unfortunately they're not in yet. They usually come in around 9:30AM if you'd
+    like to wait for them.
+  - 0\Uh...I think I'll just come back later. Sorry to bother you.
+  - 0\--Sigh-- (I guess I'll just have come back after my class. I really hope I
+    can get my money back.)

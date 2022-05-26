@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: rvBusPass
   m_EditorClassIdentifier: 
   speakers:
-  - Myself
+  - Me
   dialogue:
   - 0\Huh...what's this?
-  - 0\Oh! It's my old bus pass. Man, that sucked..
+  - 0\Oh! It's my old bus pass. Man, that sucked...

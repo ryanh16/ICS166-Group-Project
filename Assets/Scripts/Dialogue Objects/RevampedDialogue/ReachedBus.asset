@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: ReachedBus
   m_EditorClassIdentifier: 
   speakers:
-  - Myself
+  - Me
   dialogue:
-  - 0\Yes! Caught the bus!
+  - 0\I can't believe I made it. I'm not really sure where to start preparing for
+    the midterm though...

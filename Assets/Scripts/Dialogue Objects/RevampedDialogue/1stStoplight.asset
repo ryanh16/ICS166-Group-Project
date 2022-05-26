@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1stStoplight
   m_EditorClassIdentifier: 
   speakers:
-  - Myself
+  - Me
   dialogue:
-  - 0\I think thats the terminal?
-  - '0\I really hope so. '
+  - 0\That must be the terminal.
+  - 0\At least, I hope it is...I don't have much time.

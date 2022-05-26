@@ -16,13 +16,13 @@ MonoBehaviour:
   - Me
   - Surpervisor
   dialogue:
-  - 0\Hello. I am here to return this bus pass. I bought it under the assumption
+  - 0\Hi, sorry, I'm here to return this bus pass. I bought it under the assumption
     it was for a year but it expires in less than a month. Is there anything you
     can do?
-  - 1\Hm..
-  - '1\I''ll tell you what I can do. I''ll process the refund but you will have to
-    be charged for the rate that you had it. '
-  - 1\So in your case, it would be the day.
-  - 0\Alright thats fine. Totally fine! Thank you so much!
-  - 1\Alright, your funds should be sent back to your method of purchase within a
-    few days.
+  - 1\Hm...
+  - 1\I can process the refund for you, but you'll still be charged for the amount
+    of time that you had it. In your case, it would be for a day. Is that alright?
+  - 0\Sure, thank you. I'm sorry for making this difficult.
+  - 1\It's okay, you don't need to apologize, these kinds of things happen. Your
+    refund should be processed within 2-3 business days.
+  - 0\Alright, thanks again...

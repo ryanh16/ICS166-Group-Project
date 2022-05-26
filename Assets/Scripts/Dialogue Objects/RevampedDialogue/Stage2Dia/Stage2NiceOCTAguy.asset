@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Stage2NiceOCTAguy
   m_EditorClassIdentifier: 
   speakers:
-  - Myself
+  - Me
   dialogue:
-  - 0\Phew, thank goodness the surpervisor helped out.
+  - 0\I wish I didn't screw this up so badly to begin with. I bet he thinks I'm a
+    pain in the ass.

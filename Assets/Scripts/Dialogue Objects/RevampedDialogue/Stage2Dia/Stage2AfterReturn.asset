@@ -16,6 +16,6 @@ MonoBehaviour:
   - Me
   - Cashier
   dialogue:
-  - 0\I successfully returned the bus pass, thanks for your help today!
-  - 1\You are welcome! Have a good day!
-  - 0\You too!
+  - 0\Thanks a bunch for your help, I'm sorry for causing so much trouble...
+  - 1\Don't be sorry, it's fine.
+  - 0\Okay...

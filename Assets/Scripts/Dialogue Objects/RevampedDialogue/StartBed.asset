@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: StartBed
   m_EditorClassIdentifier: 
   speakers:
-  - Myself
+  - Me
   dialogue:
-  - 0\I really wish I could keep sleeping..--Yawn--
+  - 0\I really wish I could keep sleeping...--Yawn--

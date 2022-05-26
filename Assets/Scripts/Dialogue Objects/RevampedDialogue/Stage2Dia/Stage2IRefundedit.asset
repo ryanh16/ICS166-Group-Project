@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Stage2IRefundedit
   m_EditorClassIdentifier: 
   speakers:
-  - Myself
+  - Me
   - Cashier
   dialogue:
-  - 0\Thank you, have a good day!
-  - 1\You too! Come again!
+  - 0\Thanks for your help, I'm sorry for causing so much trouble...
+  - 1\Don't be sorry, it's fine.

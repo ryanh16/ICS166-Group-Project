@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Stage2SecondBuildingTrigger
   m_EditorClassIdentifier: 
   speakers:
-  - Myself
+  - Me
   dialogue:
-  - 0\Atleast now I know where to go.
-  - '0\Sucks that the busses have a terrible schedule though.. '
-  - 0\Now I have to keep waiting. Can they atleast add a bench out there?
+  - 0\At least now I know where to go.
+  - 0\It sucks that the buses have such a terrible schedule though...
+  - 0\Now I have to wait again. Couldn't they at least add a bench?

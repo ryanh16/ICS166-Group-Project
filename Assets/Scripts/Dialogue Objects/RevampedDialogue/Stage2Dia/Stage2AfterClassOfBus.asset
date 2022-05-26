@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Stage2AfterClassOfBus
   m_EditorClassIdentifier: 
   speakers:
-  - Myself
+  - Me
   dialogue:
-  - 0\Finally I'm back. I just need to get this off my shoulders already.
-  - 0\It's 9:34 now, the surpervisor should be in now... Hopefully.
+  - 0\I'm finally back. I hope nothing else is going to go wrong.
+  - 0\It's 9:34AM. The supervisor should be here by now.

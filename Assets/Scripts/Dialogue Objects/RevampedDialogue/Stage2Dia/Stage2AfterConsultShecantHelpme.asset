@@ -15,6 +15,6 @@ MonoBehaviour:
   speakers:
   - Me
   dialogue:
-  - 0\Nah, she can't help me with the bus pass.
-  - 0\I will have to wait for the County's Transportation Authority people to come.
-  - 0\Ahh~ That will be after my class.
+  - 0\She can't help me with the bus pass.
+  - 0\I'll have to wait for the County's Transportation Authority staff to come.
+  - 0\Ahh, shit. That's going to be after my class ends.

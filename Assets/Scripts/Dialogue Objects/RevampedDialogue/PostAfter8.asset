@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PostAfter8
   m_EditorClassIdentifier: 
   speakers:
-  - Myself
+  - Me
   dialogue:
-  - 0\Finally home
-  - 0\Phew, barely made it. Now lets hope my test scores are as lucky..
+  - 0\Finally home...
+  - 0\I barely made it on time...I probably failed the midterm though...

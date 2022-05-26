@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: After8
   m_EditorClassIdentifier: 
   speakers:
-  - Myself
+  - Me
   dialogue:
-  - 0\Oh no, I'm going to be late
-  - 0\Please, for the love of everything, let the bus run on time this once.
+  - 0\Oh no, I'm going to be late...
+  - 0\Please, for the love of everything, let the bus be on time, just this once.

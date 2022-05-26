@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: 1ststoplight roadblock
   m_EditorClassIdentifier: 
   speakers:
-  - Myself
+  - Me
   dialogue:
   - 0\C'mon..hurry up already!

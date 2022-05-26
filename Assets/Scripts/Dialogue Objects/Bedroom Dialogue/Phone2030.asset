@@ -17,8 +17,6 @@ MonoBehaviour:
   - Banking App
   - Weather
   dialogue:
-  - 0\June 6th 2025
-  - '1\Remaining Bank Balance : $1.37'
-  - '2\Cloudy with a chance of Rain
-
-    67 Degrees'
+  - 0\June 6th, 2025
+  - '1\Remaining Balance: $1.37'
+  - "2\\Cloudy with a chance of rain\n67\xB0F"

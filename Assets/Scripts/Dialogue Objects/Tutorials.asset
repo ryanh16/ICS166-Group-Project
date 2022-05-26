@@ -13,14 +13,15 @@ MonoBehaviour:
   m_Name: Tutorials
   m_EditorClassIdentifier: 
   speakers:
-  - Developer
+  - Tutorial
   dialogue:
-  - 0\You just forget how to play this game?
-  - '0\For basic movement:'
-  - "0\\W/A/S/D   - Move Player, Mouse   - Look around, \nSpacebar   - Jump, LMB  
-    - Interact with objects/NPCs"
-  - '0\When you are having a dialogue or choice to make:'
-  - "0\\Return   - Exit dialogue prematurely, LMB/Spacebar   - Advance dialogue, 
-    \nLMB   - Select choice (When choices available)"
-  - 0\Feel free to come back to check if you forget the control again!
-  - 0\Now, enjoy!
+  - '0\Movement Controls:'
+  - '0\W/A/S/D - Move Player        Mouse - Look around
+
+    Spacebar - Jump             
+    LMB - Interact with objects/NPCs'
+  - '0\Dialogue Controls & Choice Selection:'
+  - '0\Return - Exit dialogue prematurely        LMB/Spacebar - Advance dialogue
+
+    LMB
+    - Select choice'

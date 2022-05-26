@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Stage2ThanksForHelp
   m_EditorClassIdentifier: 
   speakers:
-  - Myself
-  - County's Transportation Center Agent
+  - Me
+  - County Transportation Center Agent
   dialogue:
-  - 0\Thank you so much.
-  - 1\You are very welcome. Have a good day.
+  - 0\Thanks.
+  - 1\You're very welcome. Have a good day.
   - 0\You too.

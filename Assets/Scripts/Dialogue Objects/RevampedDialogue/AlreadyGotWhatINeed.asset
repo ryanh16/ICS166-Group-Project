@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AlreadyGotWhatINeed
   m_EditorClassIdentifier: 
   speakers:
-  - Myself
+  - Me
   dialogue:
-  - 0\I need to go catch the bus!
-  - 0\I really hope I don't miss the midterm
+  - 0\I need to get to the bus.
+  - 0\I really hope I don't miss the midterm...

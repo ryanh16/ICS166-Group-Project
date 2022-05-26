@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: SecondBuildingAfterPurchase
   m_EditorClassIdentifier: 
   speakers:
-  - Myself
+  - Me
   dialogue:
-  - 0\Alright, time to go catch the bus now.
+  - 0\Alright, I need to get to the bus, I don't have a lot of time.

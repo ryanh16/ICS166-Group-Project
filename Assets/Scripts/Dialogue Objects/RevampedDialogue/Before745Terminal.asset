@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Before745Terminal
   m_EditorClassIdentifier: 
   speakers:
-  - Myself
+  - Me
   dialogue:
-  - 0\It's not open? Please don't tell me I came here for nothing.
+  - 0\...It's not open yet? Please don't tell me I came here for nothing.

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PostBefore8
   m_EditorClassIdentifier: 
   speakers:
-  - Myself
+  - Me
   dialogue:
-  - 0\Finally home
-  - 0\Im surprised I made it..I really thought I was going to be late.
+  - 0\Finally home...
+  - 0\I can't believe I made it...I still probably failed the midterm though...

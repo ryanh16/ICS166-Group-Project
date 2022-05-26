@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: TODo
   m_EditorClassIdentifier: 
   speakers:
-  - 
+  - 'May 22nd:'
   dialogue:
-  - 0\May 22nd
-  - '0\7am : Go get buspass'
-  - '0\8:10am : MIDTERM! GO STUDY'
+  - '0\- 7:00AM: Buy bus pass
+
+    - 8:10AM: MIDTERM! GO STUDY'

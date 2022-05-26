@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: BusInfo
   m_EditorClassIdentifier: 
   speakers:
-  - Myself
+  - Me
   dialogue:
-  - 0\Buses pass every fifteen minutes. I can't miss the bus back...
+  - 0\Buses pass every 15 minutes. I can't miss the bus back...
