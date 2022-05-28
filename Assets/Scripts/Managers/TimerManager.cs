@@ -107,6 +107,18 @@ public class TimerManager : MonoBehaviour
         {
             On745?.Invoke();
         }
+        if (timerText.text == "07:35am")
+        {
+            On735?.Invoke();
+        }
+        if (timerText.text == "07:55am")
+        {
+            On755?.Invoke();
+        }
+        if (timerText.text == "08:00am")
+        {
+            On8am?.Invoke();
+        }
 
         if (timerText.text == "09:50am")
         {
@@ -153,6 +165,36 @@ public class TimerManager : MonoBehaviour
     public void UnsubscribeFrom745(Action action)
     {
         On745 -= action;
+    }
+
+    public void SubscribeTo735(Action action)
+    {
+        On735 += action;
+    }
+
+    public void UnsubscribeFrom735(Action action)
+    {
+        On735 -= action;
+    }
+
+    public void SubscribeTo755(Action action)
+    {
+        On755 += action;
+    }
+
+    public void UnsubscribeFrom755(Action action)
+    {
+        On755 -= action;
+    }
+
+    public void SubscribeTo8(Action action)
+    {
+        On8am += action;
+    }
+
+    public void UnsubscribeFrom8(Action action)
+    {
+        On8am -= action;
     }
 
     public string GetTimeInText()
