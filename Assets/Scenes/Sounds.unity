@@ -7032,6 +7032,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 611736457}
+  CrossWalk1: {fileID: 0}
+  CrossWalk2: {fileID: 0}
 --- !u!65 &751352183
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8836,7 +8838,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: dfe2094efd211fc4783988f020160009, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 6db0b257dfc0ff54e8754dc0f85b2882, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 1
