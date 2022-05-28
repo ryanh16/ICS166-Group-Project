@@ -30,11 +30,15 @@ public class MusicSingleton : MonoBehaviour
 
     }
 
-    public void changeSong(AudioClip song, float fadeTime = 1f, float newVolume = 0f)
+    public static void changeSong(AudioClip song, float fadeTime = 1f, float newVolume = 0f, bool loop = true)
     {
-        if(musicSingletonInstance)
-            StartCoroutine(AudioFader.ChangeSound(musicSource, song, fadeTime, newVolume));
+        if (musicSingletonInstance && song != musicSource.clip)
+        {
+            musicSingletonInstance.StartCoroutine(AudioFader.ChangeSound(musicSource, song, fadeTime, newVolume));
+            musicSource.loop = loop;
+        }
     }
 
-    
+
+
 }
