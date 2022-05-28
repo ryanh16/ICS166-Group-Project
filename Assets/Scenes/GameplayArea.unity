@@ -13227,6 +13227,7 @@ GameObject:
   - component: {fileID: 1552990713}
   - component: {fileID: 1552990715}
   - component: {fileID: 1552990714}
+  - component: {fileID: 1552990716}
   m_Layer: 0
   m_Name: BusPlaceClosed
   m_TagString: Untagged
@@ -13278,6 +13279,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1552990716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552990712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b40222812e4016748857cff0c3094ffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1567825353
 GameObject:
   m_ObjectHideFlags: 0
@@ -16607,6 +16620,7 @@ GameObject:
   - component: {fileID: 1981010586}
   - component: {fileID: 1981010588}
   - component: {fileID: 1981010587}
+  - component: {fileID: 1981010589}
   m_Layer: 0
   m_Name: FirstBuildingTrigger
   m_TagString: Untagged
@@ -16658,6 +16672,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1981010589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981010585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc7be0d035e1d047980454d342954c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActiveInTheseEvents: 00000000
+  InactiveInTheseEvents: 01000000
+  CanAdvanceEvent: 0
 --- !u!1 &1986978915
 GameObject:
   m_ObjectHideFlags: 0

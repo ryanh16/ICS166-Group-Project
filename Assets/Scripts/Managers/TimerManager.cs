@@ -103,7 +103,7 @@ public class TimerManager : MonoBehaviour
         }
         timerText.text = string.Format(stringFormat, minutesToDisplay, secondsToDisplay);
 
-        if (timerText.text == "07:45am")
+        if (timerText.text == "07:12am")
         {
             On745?.Invoke();
         }

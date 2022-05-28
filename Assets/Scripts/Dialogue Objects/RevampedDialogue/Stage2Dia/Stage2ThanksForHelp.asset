@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakers:
   - Me
-  - County Transportation Center Agent
+  - Superviser
   dialogue:
   - 0\Thanks.
   - 1\You're very welcome. Have a good day.
