@@ -2763,6 +2763,7 @@ GameObject:
   - component: {fileID: 403842638}
   - component: {fileID: 403842637}
   - component: {fileID: 403842639}
+  - component: {fileID: 403842640}
   m_Layer: 0
   m_Name: TIMED 7:35
   m_TagString: Untagged
@@ -2841,6 +2842,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6827c6d8bf47444429cdc228604f12f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &403842640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403842634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea2d5a1b794d8c4d98098eccb06c4ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActivateOn735: 1
+  ActivateOn755: 0
 --- !u!1001 &406125010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6674,7 +6689,6 @@ MonoBehaviour:
   door: {fileID: 611736457}
   CrossWalk1: {fileID: 403842634}
   CrossWalk2: {fileID: 916988902}
-  Bus: {fileID: 1392954791}
 --- !u!65 &751352183
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8209,6 +8223,7 @@ GameObject:
   - component: {fileID: 916988903}
   - component: {fileID: 916988904}
   - component: {fileID: 916988905}
+  - component: {fileID: 916988906}
   m_Layer: 0
   m_Name: TIMED 7:55
   m_TagString: Untagged
@@ -8255,6 +8270,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6827c6d8bf47444429cdc228604f12f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &916988906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916988902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea2d5a1b794d8c4d98098eccb06c4ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActivateOn735: 0
+  ActivateOn755: 1
 --- !u!4 &920466235 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d286eedde407e4643abb608fb01e98b4, type: 3}

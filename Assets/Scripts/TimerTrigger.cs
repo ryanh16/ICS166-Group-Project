@@ -10,8 +10,6 @@ public class TimerTrigger : MonoBehaviour
     private GameObject CrossWalk1;
     [SerializeField]
     private GameObject CrossWalk2;
-    [SerializeField]
-    private GameObject Bus;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -21,7 +19,6 @@ public class TimerTrigger : MonoBehaviour
             TimerManager.Instance.ActivateTimer(true);
 
             door.SetActive(true);
-            Bus.SetActive(false);
             CrossWalk1.SetActive(true);
             CrossWalk2.SetActive(true);
             door.GetComponent<Outline>().SetColorToInvisible();

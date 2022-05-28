@@ -14,3 +14,4 @@ public class DoorManager : MonoBehaviour
     {
         TimerManager.Instance.SubscribeTo745(On745Time);
     }
+}
