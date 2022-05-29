@@ -20,8 +20,8 @@ MonoBehaviour:
   - 1\Good morning, how can I help you?
   - 0\Can I get a year-long student bus pass please?
   - 1\Sure! That will be...
-  - 1\$169.00. Do you have any questions?
-  - 0\($169.00...?)
+  - 1\$169. Do you have any questions?
+  - 0\($169...?)
   - 0\No, but I'm in a bit of a hurry so is there any way I can get it now?
   - 1\It shouldn't take too long. One moment.
   - 2\< Bus Pass Received >

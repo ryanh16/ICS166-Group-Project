@@ -14,8 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakers:
   - Me
-  - Superviser
   dialogue:
-  - 0\Thanks.
-  - 1\You're very welcome. Have a good day.
-  - 0\You too.
+  - 0\I wish I didn't screw this up so badly to begin with. I bet he thinks I'm a
+    pain in the ass.

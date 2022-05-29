@@ -14,9 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speakers:
   - Sign
-  - Me
   dialogue:
   - '0\Transportation Center
 
     Hours of Operation: 7:45AM - 4:30PM'
-  - 1\I guess I have to wait...

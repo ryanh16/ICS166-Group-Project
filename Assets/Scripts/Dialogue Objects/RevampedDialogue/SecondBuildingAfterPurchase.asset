@@ -15,4 +15,5 @@ MonoBehaviour:
   speakers:
   - Me
   dialogue:
-  - 0\Alright, I need to get to the bus, I don't have a lot of time.
+  - 0\Thank god, the bus is here. I don't have a lot of time.
+  - 0\I should be able to cross the street and get to it after 7:55.

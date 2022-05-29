@@ -3637,7 +3637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BranchInThisCP: {fileID: 11400000, guid: 6a4f44bddbd25fd408736daa57a8a094, type: 2}
-  DialogueInThisCP: {fileID: 0}
+  DialogueInThisCP: {fileID: 11400000, guid: 6000d43a69b47514ead50d6f55c73139, type: 2}
   DestroyOnFinish: 0
   Distance: 10
   Player: {fileID: 0}
@@ -5517,7 +5517,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &609271514
 Transform:
   m_ObjectHideFlags: 0
@@ -8359,6 +8359,8 @@ GameObject:
   - component: {fileID: 916988904}
   - component: {fileID: 916988905}
   - component: {fileID: 916988906}
+  - component: {fileID: 916988908}
+  - component: {fileID: 916988907}
   m_Layer: 0
   m_Name: TIMED 7:55
   m_TagString: Untagged
@@ -8419,6 +8421,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ActivateOn735: 0
   ActivateOn755: 1
+--- !u!114 &916988907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916988902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aad98cdf2a47684ea0089cd20f0d61b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue: {fileID: 11400000, guid: 125a6983eec3511468a2ef92518c62e2, type: 2}
+  targetLocation: {fileID: 0}
+--- !u!114 &916988908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916988902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0, g: 0, b: 0, a: 0}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &920466235 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d286eedde407e4643abb608fb01e98b4, type: 3}
