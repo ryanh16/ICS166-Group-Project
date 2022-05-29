@@ -8569,8 +8569,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3c856f40a1b6a3469211fd4a4ce70e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BranchInThisCP: {fileID: 0}
-  DialogueInThisCP: {fileID: 11400000, guid: 543ca6c9121fff54a845d91e9f753329, type: 2}
+  BranchInThisCP: {fileID: 11400000, guid: 0c60150c304bb734abbdf05427c0690b, type: 2}
+  DialogueInThisCP: {fileID: 11400000, guid: bbfe695f048f10d4294b33a878811b78, type: 2}
   DestroyOnFinish: 0
   Distance: 10
   Player: {fileID: 4064729}
@@ -18843,6 +18843,22 @@ PrefabInstance:
     - target: {fileID: 3845323682168668615, guid: 3c0dd39284e58b54eb31a9b195add7cd, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3845323682168668615, guid: 3c0dd39284e58b54eb31a9b195add7cd, type: 3}
+      propertyPath: movement.airJump
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3845323682168668615, guid: 3c0dd39284e58b54eb31a9b195add7cd, type: 3}
+      propertyPath: movement.canJump
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3845323682168668615, guid: 3c0dd39284e58b54eb31a9b195add7cd, type: 3}
+      propertyPath: movement.canCrouch
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3845323682168668615, guid: 3c0dd39284e58b54eb31a9b195add7cd, type: 3}
+      propertyPath: movement.jumpHeight
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3845323682168668615, guid: 3c0dd39284e58b54eb31a9b195add7cd, type: 3}
       propertyPath: headBob.bobClass.landTilt
