@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BusPlaceLockedManagerr : MonoBehaviour
+public class BusPlaceLockedManager : MonoBehaviour
 {
     // Start is called before the first frame update
     private void Start()

@@ -13,15 +13,16 @@ MonoBehaviour:
   m_Name: Tutorials
   m_EditorClassIdentifier: 
   speakers:
-  - Tutorial
+  - Movement Controls
+  - 'Dialogue Controls & Choice Selection:'
+  - Object Examination Controls
   dialogue:
-  - '0\Movement Controls:'
   - '0\W/A/S/D - Move Player        Mouse - Look around
 
     Spacebar - Jump             
     LMB - Interact with objects/NPCs'
-  - '0\Dialogue Controls & Choice Selection:'
-  - '0\Return - Exit dialogue prematurely        LMB/Spacebar - Advance dialogue
+  - '1\Return - Exit dialogue prematurely        LMB/Spacebar - Advance dialogue
 
     LMB
     - Select choice'
+  - 2\Q/E - Rotate object
