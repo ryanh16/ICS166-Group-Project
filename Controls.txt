@@ -1,0 +1,15 @@
+== Movement Controls ==
+ W/A/S/D - Move Player
+   Mouse - Look around
+Spacebar - Jump
+     LMB - Interact with objects/NPCs
+
+
+== Dialogue Controls ==
+      Return - Exit dialogue prematurely
+LMB/Spacebar - Advance dialogue
+         LMB - Select choice (When choices available)
+
+
+== Examination Controls ==
+Q/E - Rotate object

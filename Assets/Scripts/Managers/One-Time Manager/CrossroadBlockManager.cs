@@ -11,7 +11,7 @@ public class CrossroadBlockManager : MonoBehaviour
     private bool ActivateOn755;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         if (ActivateOn735)
         {
@@ -26,15 +26,19 @@ public class CrossroadBlockManager : MonoBehaviour
         }
     }
 
-    private void On735()
+    private void OnDestroy()
     {
         TimerManager.Instance.UnsubscribeFrom735(On735);
+        TimerManager.Instance.UnsubscribeFrom755(On755);
+    }
+
+    private void On735()
+    {
         this.gameObject.SetActive(false);
     }
 
     private void On755()
     {
-        TimerManager.Instance.UnsubscribeFrom755(On755);
         this.gameObject.SetActive(false);
     }
 }
