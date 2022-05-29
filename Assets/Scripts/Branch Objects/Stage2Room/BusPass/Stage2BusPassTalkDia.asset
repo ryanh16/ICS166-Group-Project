@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Stage2BusPassTalkDia
   m_EditorClassIdentifier: 
   speakers:
-  - Myself
+  - Me
   dialogue:
-  - 0\Finally I have a bus pass after putting it off for so long!
-  - 0\I'll be able to use it for the summer and I dont have to worry fabout next
-    year either. This is so awesome!
+  - 0\I finally have a bus pass after putting it off for so long...
+  - 0\At least I won't have to worry about this for another year.

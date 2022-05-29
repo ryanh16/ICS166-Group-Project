@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Stage2PostExamineBPdia
   m_EditorClassIdentifier: 
   speakers:
-  - Myself
+  - Me
   dialogue:
   - 0\I should call the Transportation Center to check if the bus pass really expires
-    so soon.
-  - 0\My phone is being charged on the night stand near my bed.
+    in June.
+  - 0\Where did I leave my phone...?

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Stage2BusPassExamineDia
   m_EditorClassIdentifier: 
   speakers:
-  - Myself
+  - Me
   dialogue:
-  - 0\Huh!? June 2022?
-  - 0\I bought a year pass! Why is it only valid for a year?
-  - 0\Oh no..thats 169 dollars down the drain. I need to get a refund asap.
+  - 0\Huh!? September?
+  - 0\I bought a year-long pass! Why is it only valid for 3 months?
+  - 0\Oh no...thats $169 down the drain. I need to get a refund ASAP.

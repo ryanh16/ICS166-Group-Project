@@ -5511,10 +5511,6 @@ GameObject:
   - component: {fileID: 609271517}
   - component: {fileID: 609271516}
   - component: {fileID: 609271515}
-  - component: {fileID: 609271519}
-  - component: {fileID: 609271518}
-  - component: {fileID: 609271520}
-  - component: {fileID: 609271521}
   m_Layer: 0
   m_Name: TicketSellerL (1)
   m_TagString: Untagged
@@ -5599,70 +5595,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 609271513}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &609271518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 609271513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7aad98cdf2a47684ea0089cd20f0d61b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 0710923a76314b941a97eecb1e98a4c6, type: 2}
-  targetLocation: {fileID: 0}
---- !u!114 &609271519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 609271513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 1, b: 1, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
---- !u!114 &609271520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 609271513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcc7be0d035e1d047980454d342954c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ActiveInTheseEvents: 
-  InactiveInTheseEvents: 01000000
-  CanAdvanceEvent: 0
---- !u!114 &609271521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 609271513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3c856f40a1b6a3469211fd4a4ce70e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BranchInThisCP: {fileID: 0}
-  DialogueInThisCP: {fileID: 11400000, guid: 59e07007ff61a4040be46e2a08aafeed, type: 2}
-  DestroyOnFinish: 0
-  Distance: 10
-  Player: {fileID: 4064729}
 --- !u!1 &609821713
 GameObject:
   m_ObjectHideFlags: 0
@@ -5788,7 +5720,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 611736457}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 41.628906, y: 12.435703, z: 93.31299}
+  m_LocalPosition: {x: 41.628906, y: 12.599, z: 93.31299}
   m_LocalScale: {x: 4.580013, y: 2.8571026, z: 0.16682}
   m_Children: []
   m_Father: {fileID: 575150523}
@@ -18876,6 +18808,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3845323682168668615, guid: 3c0dd39284e58b54eb31a9b195add7cd, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3845323682168668615, guid: 3c0dd39284e58b54eb31a9b195add7cd, type: 3}
+      propertyPath: headBob.bobClass.landTilt
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3845323682168668615, guid: 3c0dd39284e58b54eb31a9b195add7cd, type: 3}
+      propertyPath: headBob.bobClass.bobHeight
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3845323682168668615, guid: 3c0dd39284e58b54eb31a9b195add7cd, type: 3}
+      propertyPath: headBob.bobClass.swayAngle
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3845323682168668615, guid: 3c0dd39284e58b54eb31a9b195add7cd, type: 3}
+      propertyPath: headBob.bobClass.strafeTilt
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
