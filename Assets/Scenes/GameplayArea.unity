@@ -600,7 +600,7 @@ MonoBehaviour:
   BranchInThisCP: {fileID: 0}
   DialogueInThisCP: {fileID: 11400000, guid: 817faadf837335749ac27b6159480db7, type: 2}
   DestroyOnFinish: 0
-  Distance: 10
+  Distance: 5
   Player: {fileID: 4064729}
 --- !u!114 &28715071
 MonoBehaviour:
@@ -1487,7 +1487,7 @@ MonoBehaviour:
   BranchInThisCP: {fileID: 0}
   DialogueInThisCP: {fileID: 11400000, guid: 2ee9c89117495e945a32ad105b36405f, type: 2}
   DestroyOnFinish: 0
-  Distance: 10
+  Distance: 5
   Player: {fileID: 4064729}
 --- !u!114 &213177458
 MonoBehaviour:
@@ -6365,6 +6365,59 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 674898607}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &682569930 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3676357250268456510, guid: e9531d4940661534b9ecbdf49414a870, type: 3}
+  m_PrefabInstance: {fileID: 975007014276935119}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &682569931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682569930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3c856f40a1b6a3469211fd4a4ce70e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BranchInThisCP: {fileID: 0}
+  DialogueInThisCP: {fileID: 11400000, guid: b618c1598cce2d14d9e33da1261bf38e, type: 2}
+  DestroyOnFinish: 0
+  Distance: 2
+  Player: {fileID: 4064729}
+--- !u!114 &682569932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682569930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!65 &682569933
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682569930}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.446432, y: 2, z: 24.591375}
+  m_Center: {x: 0.23770274, y: -0.0000009630486, z: 11.295703}
 --- !u!1 &688958516
 GameObject:
   m_ObjectHideFlags: 0
@@ -13344,7 +13397,7 @@ MonoBehaviour:
   BranchInThisCP: {fileID: 0}
   DialogueInThisCP: {fileID: 11400000, guid: 847fc0e768017404ba39ad05c8fccb42, type: 2}
   DestroyOnFinish: 0
-  Distance: 10
+  Distance: 5
   Player: {fileID: 4064729}
 --- !u!114 &1552950760
 MonoBehaviour:
@@ -13359,7 +13412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActiveInTheseEvents: 05000000
-  InactiveInTheseEvents: 00000000010000000200000003000000
+  InactiveInTheseEvents: 0000000001000000020000000300000006000000
   CanAdvanceEvent: 0
 --- !u!114 &1552950761
 MonoBehaviour:
@@ -16904,7 +16957,7 @@ MonoBehaviour:
   BranchInThisCP: {fileID: 0}
   DialogueInThisCP: {fileID: 11400000, guid: 55cdd96354bd7704fbf2b5ca6373524a, type: 2}
   DestroyOnFinish: 0
-  Distance: 10
+  Distance: 5
   Player: {fileID: 4064729}
 --- !u!114 &1978351693
 MonoBehaviour:

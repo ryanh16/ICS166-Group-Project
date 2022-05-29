@@ -13,6 +13,17 @@ public class CreditOption : Option
             EventManager.Instance.AdvanceToNextEvent();
         }
         // Set timer to 9:50 here
-        TimerManager.Instance.SetTimer(9, 50);
+        string curTime = TimerManager.Instance.GetTimeInText();
+
+        int hour = curTime[0]*10 + curTime[1];
+        int min = curTime[3] * 10 + curTime[4];
+        // if the time is bigger than 9:50 already
+        bool BiggerThan950 = ((hour > 9) || ((hour == 9) && (min > 50)));
+        
+
+        if (!BiggerThan950)
+        {
+            TimerManager.Instance.SetTimer(9, 50);
+        }
     }
 }
