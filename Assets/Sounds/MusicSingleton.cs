@@ -12,8 +12,10 @@ public class MusicSingleton : MonoBehaviour
     private static MusicSingleton musicSingletonInstance;
     private static AudioSource musicSource;
 
+
+
     // Start is called before the first frame update
-    void Awake()
+    private void Awake()
     {
         DontDestroyOnLoad(this);
 
@@ -30,6 +32,7 @@ public class MusicSingleton : MonoBehaviour
 
     }
 
+
     public static void changeSong(AudioClip song, float fadeTime = 1f, float newVolume = 0f, bool loop = true)
     {
         if (musicSingletonInstance && song != musicSource.clip)
@@ -38,7 +41,4 @@ public class MusicSingleton : MonoBehaviour
             musicSource.loop = loop;
         }
     }
-
-
-
 }

@@ -24,14 +24,23 @@ public class DialogueManager : MonoBehaviour
     private static bool isInDia = false;
     private Dialogue curDialogue;
 
-    // Variables related to GoldController
+    // Variables related to Player
     [SerializeField]
     private GameObject playerObject;
+    [SerializeField]
+    private AudioSource playerDialogueAudio;
+    private float originalDialogueAudioPitch;
+    [SerializeField, Range(0.2f, 1)]
+    private float dialoguePitchRange = 0.2f;
+    [SerializeField, Range(0.02f, 0.1f)]
+    private float dialogueLetterDelay = 0.02f;
     private static Hertzole.GoldPlayer.GoldPlayerController goldController;
 
     private static DialogueManager Instance;
 
     private static Action OnDialogueEndsAction;
+
+
 
     private void Start()
     {
@@ -40,7 +49,9 @@ public class DialogueManager : MonoBehaviour
         nameText = dialogueBox.transform.GetChild(0).GetComponent<Text>();
         dialogueText = dialogueBox.transform.GetChild(1).GetComponent<Text>();
         goldController = playerObject.GetComponent<Hertzole.GoldPlayer.GoldPlayerController>();
+        originalDialogueAudioPitch = playerDialogueAudio.pitch;
     }
+
 
     private void OnDestroy()
     {
@@ -143,7 +154,11 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in splitSentence.Value.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return null;
+
+            Instance.playerDialogueAudio.pitch = UnityEngine.Random.Range(Instance.originalDialogueAudioPitch - Instance.dialoguePitchRange, Instance.originalDialogueAudioPitch + Instance.dialoguePitchRange);
+            Instance.playerDialogueAudio.Play();
+
+            yield return new WaitForSeconds(Instance.dialogueLetterDelay);
         }
     }
 
@@ -168,10 +183,12 @@ public class DialogueManager : MonoBehaviour
         return new KeyValuePair<string, string>(Instance.curDialogue.GetSpeaker(int.Parse(splitSentence[0])), splitSentence[1]);
     }
 
+
     public static void SubscribeToDialogueEnds(Action action)
     {
         OnDialogueEndsAction += action;
     }
+
 
     public static void UnsubscribeFromDialogueEnds(Action action)
     {

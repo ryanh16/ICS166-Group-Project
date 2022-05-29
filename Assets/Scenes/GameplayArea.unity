@@ -6803,7 +6803,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 751352180}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -60.660034, y: 0.276, z: 29.46399}
+  m_LocalPosition: {x: -60.660034, y: 0.276, z: 29.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1753166098}
@@ -6835,7 +6835,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5, y: 1, z: 1}
+  m_Size: {x: 5, y: 1, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &761598630
 GameObject:
@@ -18792,6 +18792,14 @@ PrefabInstance:
       propertyPath: m_Depth
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3845323680780717288, guid: 3c0dd39284e58b54eb31a9b195add7cd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3845323680780717289, guid: 3c0dd39284e58b54eb31a9b195add7cd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3845323682168668609, guid: 3c0dd39284e58b54eb31a9b195add7cd, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -18876,8 +18884,29 @@ PrefabInstance:
       propertyPath: headBob.bobClass.strafeTilt
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3845323682168668615, guid: 3c0dd39284e58b54eb31a9b195add7cd, type: 3}
+      propertyPath: movement.runSpeeds.forwardSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5793738741514761781, guid: 3c0dd39284e58b54eb31a9b195add7cd, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3b0d33ab2b85d4043b9904b29e88bd7c, type: 3}
+    - target: {fileID: 5793738741514761781, guid: 3c0dd39284e58b54eb31a9b195add7cd, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5793738741514761781, guid: 3c0dd39284e58b54eb31a9b195add7cd, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -2553626593127309534, guid: 5d188e31eba889d4cb9268ee0fbb632f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c0dd39284e58b54eb31a9b195add7cd, type: 3}
+--- !u!82 &3845323682170897437 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5793738741514761781, guid: 3c0dd39284e58b54eb31a9b195add7cd, type: 3}
+  m_PrefabInstance: {fileID: 3845323682170897436}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4581605965780456559
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19128,6 +19157,14 @@ PrefabInstance:
       propertyPath: playerObject
       value: 
       objectReference: {fileID: 4064729}
+    - target: {fileID: 6631405748811480677, guid: dd2d6f4b468936b4bac8afa382b36d76, type: 3}
+      propertyPath: dialoguePitchRange
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6631405748811480677, guid: dd2d6f4b468936b4bac8afa382b36d76, type: 3}
+      propertyPath: playerDialogueAudio
+      value: 
+      objectReference: {fileID: 3845323682170897437}
     - target: {fileID: 6631405748811480678, guid: dd2d6f4b468936b4bac8afa382b36d76, type: 3}
       propertyPath: m_Name
       value: DialogueManager
