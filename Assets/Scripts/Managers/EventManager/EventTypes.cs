@@ -6,11 +6,13 @@ public sealed class EventTypes
     public enum Events
     {
         GameStart,
+        BusPassInteractedWith,
         AfterPurchaseBusPass,
         AfterExamineBusPass,
         AfterCallTC,
         AfterConsult,
         AfterClass,
+        AfterSupervisorIntroduced,
         AfterReturnBusPass,
         Ending
     }

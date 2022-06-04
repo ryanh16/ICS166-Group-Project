@@ -11,10 +11,19 @@ public class EventManager : MonoBehaviour
 {
     private static int CurrentEventIndex;
 
-    private static List<EventTypes.Events> EventChain = new List<EventTypes.Events> { EventTypes.Events.GameStart, 
-        EventTypes.Events.AfterPurchaseBusPass, EventTypes.Events.AfterExamineBusPass,
-        EventTypes.Events.AfterCallTC, EventTypes.Events.AfterConsult, 
-        EventTypes.Events.AfterClass, EventTypes.Events.AfterReturnBusPass, EventTypes.Events.Ending};
+    private static List<EventTypes.Events> EventChain = new List<EventTypes.Events>
+    { 
+        EventTypes.Events.GameStart,
+        EventTypes.Events.BusPassInteractedWith,
+        EventTypes.Events.AfterPurchaseBusPass,
+        EventTypes.Events.AfterExamineBusPass,
+        EventTypes.Events.AfterCallTC,
+        EventTypes.Events.AfterConsult, 
+        EventTypes.Events.AfterClass,
+        EventTypes.Events.AfterSupervisorIntroduced,
+        EventTypes.Events.AfterReturnBusPass,
+        EventTypes.Events.Ending
+    };
 
     private static Dictionary<EventTypes.Events, Action> subscriberDict;
     public static EventManager Instance
@@ -87,6 +96,6 @@ public class EventManager : MonoBehaviour
 
     public bool HasReachedTheEnd()
     {
-        return CurrentEventIndex == 7;
+        return CurrentEventIndex == (EventChain.Count - 1);
     }
 }

@@ -16,5 +16,8 @@ MonoBehaviour:
   - Me
   dialogue:
   - 0\Huh!? September?
-  - 0\I bought a year-long pass! Why is it only valid for 3 months?
+  - 0\I bought a year-long pass! Why is it only valid for 4 months?
   - 0\Oh no...thats $169 down the drain. I need to get a refund ASAP.
+  - 0\I should call the Transportation Center to check if the bus pass really expires
+    in September.
+  - 0\Where did I leave my phone...?

@@ -137,7 +137,9 @@ public class DialogueManager : MonoBehaviour
     {
         isInDia = false;
         goldController.enabled = true;
-        animator.SetBool("IsOnScreen", false) ;
+        animator.SetBool("IsOnScreen", false);
+        Instance.StopCoroutine(TypeOutDialogue(currentSentence));
+
         OnDialogueEndsAction?.Invoke();
     }
 

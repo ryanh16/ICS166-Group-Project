@@ -17,8 +17,7 @@ MonoBehaviour:
   - Supervisor
   dialogue:
   - 0\Hi, sorry, I'm here to return this bus pass. I bought it under the assumption
-    it was for a year but it expires in less than 3 months. Is there anything you
-    can do?
+    it was for a year but it expires in 4 months. Is there anything you can do?
   - 1\Hm...
   - 1\I can process the refund for you, but you'll still be charged for the amount
     of time that you had it. In your case, it would be for a day. Is that alright?

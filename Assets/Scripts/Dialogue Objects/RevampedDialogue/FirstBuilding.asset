@@ -15,5 +15,5 @@ MonoBehaviour:
   speakers:
   - Me
   dialogue:
-  - 0\I really hope that's not the line...
-  - 0\Nobody seems busy...maybe someone can help me.
+  - 0\Oh no...it's really busy.
+  - 0\There are three different lines...maybe someone can tell me what they're for.
